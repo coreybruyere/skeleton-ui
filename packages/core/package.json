@@ -18,11 +18,11 @@
     "prepare": "tsdx build"
   },
   "peerDependencies": {
+    "@styled-system/css": ">=5",
     "polished": ">=3.4.4",
     "react": ">=16",
     "styled-components": ">=5",
-    "styled-system": ">=5",
-    "@styled-system/css": ">=5"
+    "styled-system": ">=5"
   },
   "husky": {
     "hooks": {
@@ -39,7 +39,9 @@
   "author": "Corey Bruyere",
   "module": "dist/core.esm.js",
   "devDependencies": {
+    "@babel/core": "^7.11.1",
     "husky": "^4.2.5",
+    "react": "^16.13.1",
     "styled-components": "^5.0.0",
     "styled-system": "^5.1.4",
     "tsdx": "^0.13.2",
