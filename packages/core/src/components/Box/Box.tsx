@@ -29,3 +29,5 @@ export const Box = styled.div<BoxProps>(
   },
   compose(space, color, layout, flexbox, border, position)
 );
+
+// Implement theme-ui : https://github.com/system-ui/theme-ui/blob/master/packages/components/src/Box.js
