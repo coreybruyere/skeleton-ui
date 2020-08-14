@@ -1,13 +1,32 @@
 {
   "name": "nail-polish",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "main": "index.js",
   "author": "Corey Bruyere",
   "license": "MIT",
   "devDependencies": {
-    "lerna": "^3.16.4"
+    "@babel/core": "^7.11.1",
+    "@storybook/addon-actions": "^6.0.7",
+    "@storybook/addon-docs": "^6.0.7",
+    "@storybook/addon-essentials": "^6.0.7",
+    "@storybook/addon-links": "^6.0.7",
+    "@storybook/react": "^6.0.7",
+    "babel-loader": "^8.1.0",
+    "lerna": "^3.16.4",
+    "react": "^16.13.1",
+    "react-is": "^16.13.1",
+    "typescript": "^3.9.7"
   },
   "workspaces": [
     "packages/*"
-  ]
+  ],
+  "dependencies": {},
+  "scripts": {
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/coreybruyere/nail-polish.git"
+  }
 }
