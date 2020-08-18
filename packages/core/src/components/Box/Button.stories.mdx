@@ -1,7 +1,6 @@
 import { Meta, Story, Props, Preview } from '@storybook/addon-docs/blocks';
 
-import { Box } from './box';
-import { Text } from '../';
+import { Box } from './Box';
 
 <Meta title="Components/Box" component={Box} />
 
@@ -10,17 +9,10 @@ import { Text } from '../';
 Building block of layouts. Creates a box-model context
 
 <Preview withToolbar>
-  <Story name="box">
+  <Story name="Base">
     <Box>
-      <Box bg="text.primary" p={3} mb={4}>
-        <Text variant="body" color="text.inverse">
-          This is a box
-        </Text>
-      </Box>
-      <Box bg="text.primary" p={3}>
-        <Text variant="body" color="text.inverse">
-          This is a box
-        </Text>
+      <Box p={3} mb={4}>
+        <Text>This is a box</Text>
       </Box>
     </Box>
   </Story>
@@ -29,8 +21,10 @@ Building block of layouts. Creates a box-model context
 ### Control Dimensions Using Sizing Props
 
 <Preview withToolbar>
-  <Story name="sizing">
-    <Box bg="brand.accent" width={5} height={5}></Box>
+  <Story name="With sizing">
+    <Box width={5} height={5}>
+      Box with sizing
+    </Box>
   </Story>
 </Preview>
 
