@@ -1,10 +1,24 @@
-import { Meta, Story, Props, Preview } from '@storybook/addon-docs/blocks';
+import {
+  Meta,
+  Story,
+  Props,
+  Preview,
+  Subtitle,
+} from '@storybook/addon-docs/blocks';
+// This isn't documented anywhere, but look into storybook docs exports: https://github.com/storybookjs/storybook/blob/master/addons/docs/src/blocks/index.ts
 
 import { Box } from './Box';
 
 <Meta title="Components/Box" component={Box} />
 
 # Box
+
+<Subtitle>
+  Haiku is Hart's design system. Haiku offers a collection of components
+  available through different packages under the @hart/ npm namespace to help
+  developers and designers develop apps and prototype UI while adhering to
+  Hart's design standards and usability best practices.
+</Subtitle>
 
 Building block of layouts. Creates a box-model context
 
