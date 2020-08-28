@@ -12,6 +12,7 @@
     "@storybook/addon-links": "^6.0.17",
     "@storybook/react": "^6.0.17",
     "babel-loader": "^8.1.0",
+    "csstype": "^3.0.3",
     "lerna": "^3.16.4",
     "react": "^16.13.1",
     "react-is": "^16.13.1",
@@ -20,7 +21,9 @@
   "workspaces": [
     "packages/*"
   ],
-  "dependencies": {},
+  "dependencies": {
+    "@types/theme-ui": "^0.3.6"
+  },
   "scripts": {
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
