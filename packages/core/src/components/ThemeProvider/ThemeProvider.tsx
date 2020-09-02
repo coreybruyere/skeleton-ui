@@ -1,7 +1,18 @@
 import React from 'react';
-import { ThemeProvider as ThemeDecorator } from 'theme-ui';
-import { theme } from '../../theme';
+import {
+  ThemeProvider as ThemeDecorator,
+  ThemeProviderProps as ThemeDecoratorProps,
+} from 'theme-ui';
+import { theme as defaultTheme } from '../../theme';
 
-export const ThemeProvider = ({ children }) => (
-  <ThemeDecorator theme={theme}>{children}</ThemeDecorator>
-);
+const merge = require('deepmerge');
+
+export type HaikuThemeProviderProps = React.PropsWithChildren<{}> &
+  Partial<ThemeDecoratorProps<typeof defaultTheme>>;
+
+export const ThemeProvider = (props: any) => {
+  const { children, theme } = props;
+  const mergedTheme = theme ? merge(defaultTheme, theme) : defaultTheme;
+
+  return <ThemeDecorator theme={mergedTheme}>{children}</ThemeDecorator>;
+};

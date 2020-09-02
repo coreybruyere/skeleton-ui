@@ -7,18 +7,18 @@
 //   monospace: 'Menlo, monospace',
 // };
 
-export const fontSizes = [
-  '0.625rem',
-  '0.75rem',
-  '1rem',
-  '1.125rem',
-  '1.25rem',
-  '1.5rem',
-  '1.75rem',
-  '2rem',
-  '2.5rem',
-  '3rem',
-];
+// export const fontSizes = [
+//   '0.625rem',
+//   '0.75rem',
+//   '1rem',
+//   '1.125rem',
+//   '1.25rem',
+//   '1.5rem',
+//   '1.75rem',
+//   '2rem',
+//   '2.5rem',
+//   '3rem',
+// ];
 
 // export const fontWeights = {
 //   regular: 400,
@@ -135,7 +135,7 @@ export const fontSizes = [
 
 export const theme = {
   breakpoints: ['40em', '52em', '64em'],
-  space: [0, 4, 8, 16, 32, 64, 128, 256, 512],
+  space: [0, 4, 8, '1rem', 32, 64, 128, 256, 512],
   fonts: {
     body:
       'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif',
