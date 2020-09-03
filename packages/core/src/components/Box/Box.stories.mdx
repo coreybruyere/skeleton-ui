@@ -23,8 +23,12 @@ Building block of layouts. Creates a box-model context
 <Preview withToolbar withSource="open">
   <Story name="Base">
     <Box>
-      <Box p={3} mb={4}>
-        <Text>This is a box</Text>
+      <Box
+        sx={{
+          padding: 3,
+          bg: 'primary',
+        }}>
+        This is a Box
       </Box>
     </Box>
   </Story>

@@ -135,7 +135,17 @@
 
 export const theme = {
   breakpoints: ['40em', '52em', '64em'],
-  space: [0, 4, 8, '1rem', 32, 64, 128, 256, 512],
+  space: [
+    0,
+    '.25rem',
+    '.5rem',
+    '1rem',
+    '2rem',
+    '4rem',
+    '8rem',
+    '16rem',
+    '32rem',
+  ],
   fonts: {
     body:
       'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif',

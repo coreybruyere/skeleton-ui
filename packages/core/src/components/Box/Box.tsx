@@ -65,11 +65,9 @@
 // Implement theme-ui : https://github.com/system-ui/theme-ui/blob/master/packages/components/src/Box.js
 
 import styled from '@emotion/styled';
-import { BoxProps as SpaceColorProps } from 'theme-ui';
+import { Box as BaseBox, BoxProps as SpaceColorProps } from 'theme-ui';
 import {
   compose,
-  space,
-  color,
   layout,
   flexbox,
   border,
@@ -86,10 +84,13 @@ export type BoxProps = SpaceColorProps &
   BorderProps &
   PositionProps;
 
-export const Box = styled.div<BoxProps>(
+/**
+ * Extend theme-ui Box with layout, flexbox, border, & position props
+ */
+export const Box = styled(BaseBox)<BoxProps>(
   {
     boxSizing: 'border-box',
     minWidth: 0,
   },
-  compose(space, color, layout, flexbox, border, position)
+  compose(layout, flexbox, border, position)
 );
