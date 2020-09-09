@@ -66,8 +66,11 @@
 
 import styled from '@emotion/styled';
 import { Box as BaseBox, BoxProps as SpaceColorProps } from 'theme-ui';
+import { createShouldForwardProp } from '@styled-system/should-forward-prop';
 import {
   compose,
+  space,
+  color,
   layout,
   flexbox,
   border,
@@ -83,6 +86,14 @@ export type BoxProps = SpaceColorProps &
   FlexboxProps &
   BorderProps &
   PositionProps;
+
+export const shouldForwardProp = createShouldForwardProp([
+  ...(space.propNames as string[]),
+  ...(color.propNames as string[]),
+  ...(layout.propNames as string[]),
+  ...(flexbox.propNames as string[]),
+  ...(position.propNames as string[]),
+]);
 
 /**
  * Extend theme-ui Box with layout, flexbox, border, & position props

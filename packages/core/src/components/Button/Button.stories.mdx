@@ -1,0 +1,31 @@
+import {
+  Meta,
+  Story,
+  Props,
+  Preview,
+  Subtitle,
+} from '@storybook/addon-docs/blocks';
+// This isn't documented anywhere, but look into storybook docs exports: https://github.com/storybookjs/storybook/blob/master/addons/docs/src/blocks/index.ts
+
+import { Button } from './Button';
+
+<Meta title="Components/Button" component={Button} />
+
+# Button
+
+<Subtitle>
+  Button
+</Subtitle>
+
+
+<Preview withToolbar withSource="open">
+  <Story name="Base">
+      <Button
+        sx={{
+          padding: 3,
+          bg: 'primary',
+        }}>
+        This is a Button
+      </Button>
+  </Story>
+</Preview>
