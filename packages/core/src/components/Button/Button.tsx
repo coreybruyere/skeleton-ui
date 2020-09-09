@@ -12,8 +12,8 @@ export type StyledButtonProps = React.ComponentPropsWithoutRef<'button'> &
 export type ButtonProps = StyledComponent<'button', any, StyledButtonProps>;
 
 export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
-  ({ children, ...rest }, ref: any) => (
-    <S.Button as={'button'} ref={ref} {...rest}>
+  ({ children, ...rest }, ref) => (
+    <S.Button as={'button'} ref={ref as any} {...rest}>
       {children}
     </S.Button>
   )
