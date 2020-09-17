@@ -1,7 +1,7 @@
 import React, { forwardRef } from 'react';
 import { StyledComponent } from '@emotion/styled';
 
-import { BoxProps } from '..';
+import { BoxProps } from 'components';
 import * as S from './styles';
 
 export type StyledInputProps = React.ComponentPropsWithoutRef<'input'> &
