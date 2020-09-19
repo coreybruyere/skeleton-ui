@@ -1,9 +1,10 @@
 import styled from '@emotion/styled';
 
-import { Box, BoxProps, shouldForwardProp } from '..';
+import { BaseProps, shouldForwardProp } from '../../system';
+import { Box } from '../../components';
 
 export const Input = styled(Box, {
   shouldForwardProp,
-})<BoxProps>`
+})<BaseProps>`
   color: red;
 `;

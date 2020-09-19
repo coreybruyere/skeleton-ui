@@ -3,7 +3,7 @@ import {
   ThemeProvider as ThemeDecorator,
   ThemeProviderProps as ThemeDecoratorProps,
 } from 'theme-ui';
-import { theme as defaultTheme } from 'theme';
+import { theme as defaultTheme } from '../../theme';
 
 const merge = require('deepmerge');
 

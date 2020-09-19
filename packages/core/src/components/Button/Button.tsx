@@ -1,11 +1,11 @@
 import React, { forwardRef } from 'react';
 import { StyledComponent } from '@emotion/styled';
 
-import { BoxProps } from 'components';
+import { BaseProps } from 'system';
 import * as S from './styles';
 
 export type StyledButtonProps = React.ComponentPropsWithoutRef<'button'> &
-  BoxProps & {
+  BaseProps & {
     isLoading?: boolean;
   };
 
