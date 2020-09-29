@@ -25,6 +25,7 @@
     "@types/theme-ui": "^0.3.6"
   },
   "scripts": {
+    "start": "npm run storybook",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
   },
