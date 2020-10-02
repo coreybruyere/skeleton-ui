@@ -28,8 +28,38 @@ import { Box } from '../Box';
           padding: 3,
           bg: 'primary',
         }}>
-        <Box p={2} bg={'background'}>Child of grid - 1fr</Box>
-        <Box p={2} bg={'background'}>Child of grid - 2fr</Box>
+        <Box p={2} bg={'background'}><code>1fr</code></Box>
+        <Box p={2} bg={'background'}><code>2fr</code></Box>
+      </Grid>
+  </Story>
+</Preview>
+
+<Preview withToolbar withSource="open">
+  <Story name="With responsive columns">
+      <Grid
+        gridTemplateColumns={['1fr 2fr', '1fr 1fr']}
+        gridColumnGap={3}
+        sx={{
+          padding: 3,
+          bg: 'primary',
+        }}>
+        <Box p={2} bg={'background'}><code>[1fr, 1fr]</code></Box>
+        <Box p={2} bg={'background'}><code>[2fr, 2fr]</code></Box>
+      </Grid>
+  </Story>
+</Preview>
+
+<Preview withToolbar withSource="open">
+  <Story name="With CSS grid functions">
+      <Grid
+        gridTemplateColumns={['repeat(auto-fit, minmax(192px, 1fr))']}
+        gridColumnGap={3}
+        sx={{
+          padding: 3,
+          bg: 'primary',
+        }}>
+        <Box p={2} bg={'background'}><code>auto-fix, minmax(192px, 1fr)</code></Box>
+        <Box p={2} bg={'background'}><code>auto-fix, minmax(192px, 1fr)</code></Box>
       </Grid>
   </Story>
 </Preview>
