@@ -9,7 +9,7 @@ import { variant } from 'styled-system';
 import { Base, BaseProps, baseStyleProps } from '../../system';
 
 export type TextProps = {
-  variant: 'body' | 'caption' | 'hint' | 'label';
+  variant: 'body' | 'caption' | 'label';
 } & BaseProps &
   TypographyProps;
 
@@ -31,10 +31,6 @@ const textVariants = variant({
     caption: {
       ...defaultextStyles,
       fontSize: 1,
-    },
-    hint: {
-      ...defaultextStyles,
-      fontSize: 0,
     },
     label: {
       ...defaultextStyles,
