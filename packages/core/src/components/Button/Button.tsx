@@ -10,14 +10,10 @@ export type StyledButtonPropz = React.ComponentPropsWithoutRef<'button'> &
     variant: 'primary' | 'secondary' | 'bare';
   };
 
-export type ButtonProps = StyledComponent<
-  'button',
-  any,
-  BaseProps & {
-    isLoading?: boolean;
-    variant?: 'primary' | 'secondary' | 'bare';
-  }
->;
+export type ButtonProps = StyledComponent<'button', any, BaseProps> & {
+  isLoading?: boolean;
+  variant: 'primary' | 'secondary' | 'bare';
+};
 
 export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
   ({ children, variant = 'primary', ...rest }, ref) => (
