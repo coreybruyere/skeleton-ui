@@ -17,16 +17,46 @@ import { Button } from './Button';
   Button
 </Subtitle>
 
-
 <Preview withToolbar withSource="open">
   <Story name="Base">
-      <Button
-        as="a"
-        sx={{
-          padding: 3,
-          bg: 'primary',
-        }}>
-        This is a Button
+      <Button>
+        Button
       </Button>
   </Story>
 </Preview>
+
+<Preview withToolbar withSource="open">
+  <Story name="With bare variant">
+      <Button variant="bare">
+        Bare Button
+      </Button>
+  </Story>
+</Preview>
+
+<Preview withToolbar withSource="open">
+  <Story name="With primary variant">
+      <Button variant="primary">
+        Primary Button
+      </Button>
+  </Story>
+</Preview>
+
+<Preview withToolbar withSource="open">
+  <Story name="With secondary variant">
+      <Button variant="secondary">
+        Secondary Button
+      </Button>
+  </Story>
+</Preview>
+
+<Preview withToolbar withSource="open">
+  <Story name="With sx prop">
+      <Button
+        sx={{
+          bg: 'primary',
+        }}>
+        Styled Button
+      </Button>
+  </Story>
+</Preview>
+
