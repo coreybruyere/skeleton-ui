@@ -1,8 +1,13 @@
 import styled from '@emotion/styled';
 import { compose, variant } from 'styled-system';
 
-import { shouldForwardProp } from '../../system';
-import { Text, TextProps } from '../../components';
+import { StyledButtonProps } from './Button';
+import {
+  shouldForwardProp,
+  baseStyleProps,
+  typographyStyleProps,
+} from '../../system';
+import { Box } from '../../components';
 
 const defaultextStyles = {
   fontFamily: 'body',
@@ -17,18 +22,20 @@ const buttonVariants = variant({
   variants: {
     primary: {
       ...defaultextStyles,
-      fontSize: 2,
+      fontSize: 3,
     },
     secondary: {
       ...defaultextStyles,
       fontSize: 1,
     },
     bare: {
-      padding: 0,
+      p: 0,
     },
   },
 });
 
-export const Button = styled(Text, {
+export const Button = styled(Box, {
   shouldForwardProp,
-})<TextProps>(compose(buttonVariants));
+})<StyledButtonProps>(
+  compose(...baseStyleProps, ...typographyStyleProps, buttonVariants)
+);
