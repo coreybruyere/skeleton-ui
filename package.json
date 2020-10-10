@@ -27,7 +27,8 @@
   "scripts": {
     "start": "npm run storybook",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "bootstrap": "lerna exec npm install"
   },
   "repository": {
     "type": "git",

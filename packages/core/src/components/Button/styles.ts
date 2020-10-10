@@ -7,7 +7,7 @@ import {
   baseStyleProps,
   typographyStyleProps,
 } from '../../system';
-import { Box } from '../../components';
+import { Box } from '../../components/Box';
 
 const defaultextStyles = {
   fontFamily: 'body',
