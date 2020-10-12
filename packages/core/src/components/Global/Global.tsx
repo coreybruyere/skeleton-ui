@@ -7,7 +7,7 @@ export const Global = () => {
       styles={theme => ({
         '*': {
           boxSizing: 'border-box',
-          color: theme.color.text,
+          color: theme.colors.text,
         },
       })}
     />
