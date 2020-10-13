@@ -1,4 +1,4 @@
-# Skeleton UI
+# Skeleton UI ☠️💀
 
 ## Skeleton UI Design System Kit
 
