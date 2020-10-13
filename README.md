@@ -1,3 +1,5 @@
-# Nail Polish
+# Skeleton UI
 
-Nail Polish Design System Kit
+## Skeleton UI Design System Kit
+
+A starter "skeleton" giving you the bare bones needed to get up and running with your design system.
