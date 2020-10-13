@@ -18,11 +18,7 @@
     "prepare": "tsdx build"
   },
   "peerDependencies": {
-    "@styled-system/css": ">=5",
-    "polished": ">=3.4.4",
-    "react": ">=16",
-    "emotion": ">=10",
-    "styled-system": ">=5"
+    "react": ">=16"
   },
   "husky": {
     "hooks": {
@@ -42,15 +38,20 @@
     "@babel/core": "^7.11.1",
     "@types/styled-system": "^5.1.10",
     "@types/styled-system__should-forward-prop": "^5.1.1",
-    "deepmerge": "^4.2.2",
-    "emotion": "^10.0.27",
     "husky": "^4.2.5",
     "react": "^16.13.1",
-    "styled-system": "^5.1.4",
-    "theme-ui": "^0.3.1",
+    "styled-system": "^5.1.2",
     "tsdx": "^0.13.2",
     "tslib": "^2.0.1",
     "typescript": "^4.0.2"
   },
-  "dependencies": {}
+  "dependencies": {
+    "deepmerge": "^4.2.2",
+    "@emotion/core": "^10.0.0",
+    "@emotion/styled": "^10.0.0",
+    "@styled-system/css": "^5.1.2",
+    "@styled-system/should-forward-prop": "^5.1.2",
+    "@styled-system/space": "^5.1.2",
+    "theme-ui": "^0.4.0-rc.5"
+  }
 }

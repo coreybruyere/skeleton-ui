@@ -1,0 +1,9 @@
+{
+  "version": "v1",
+  "packages": {
+    "core": {
+      "signature": "68ddd93f4eb46221101788bbf0451375",
+      "file": true
+    }
+  }
+}
