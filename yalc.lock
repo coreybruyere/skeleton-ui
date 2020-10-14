@@ -1,0 +1,9 @@
+{
+  "version": "v1",
+  "packages": {
+    "core": {
+      "signature": "b53702ea87e9b178167c479f3e4f1d73",
+      "pure": true
+    }
+  }
+}

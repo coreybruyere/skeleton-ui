@@ -1,0 +1,46 @@
+{
+  "version": "0.1.0+b53702ea",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "src"
+  ],
+  "engines": {
+    "node": ">=10"
+  },
+  "scripts": {
+    "start": "tsdx watch",
+    "build": "tsdx build",
+    "test": "tsdx test",
+    "lint": "tsdx lint",
+    "prepare": "tsdx build"
+  },
+  "peerDependencies": {
+    "react": ">=16"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "tsdx lint"
+    }
+  },
+  "prettier": {
+    "printWidth": 80,
+    "semi": true,
+    "singleQuote": true,
+    "trailingComma": "es5"
+  },
+  "name": "core",
+  "author": "Corey Bruyere",
+  "module": "dist/core.esm.js",
+  "dependencies": {
+    "@emotion/core": "^10.0.0",
+    "@emotion/styled": "^10.0.0",
+    "@styled-system/css": "^5.1.2",
+    "@styled-system/should-forward-prop": "^5.1.2",
+    "@styled-system/space": "^5.1.2",
+    "@theme-ui/css": "^0.4.0-rc.5"
+  },
+  "yalcSig": "b53702ea87e9b178167c479f3e4f1d73"
+}

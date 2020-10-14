@@ -1,0 +1,49 @@
+import {
+  Meta,
+  Story,
+  Props,
+  Preview,
+  Subtitle,
+} from '@storybook/addon-docs/blocks';
+// This isn't documented anywhere, but look into storybook docs exports: https://github.com/storybookjs/storybook/blob/master/addons/docs/src/blocks/index.ts
+
+import { Box } from './Box';
+
+<Meta title="Components/Box" component={Box} />
+
+# Box
+
+<Subtitle>
+  The Box component is the root of all components and supports space, layout,
+  flexbox, border, position, and color styled props from styled-system.
+</Subtitle>
+
+Building block of layouts. Creates a box-model context
+
+<Preview withToolbar withSource="open">
+  <Story name="Base">
+    <Box>
+      <Box
+        sx={{
+          padding: 3,
+          bg: 'primary',
+        }}>
+        This is a Box
+      </Box>
+    </Box>
+  </Story>
+</Preview>
+
+### Control Dimensions Using Sizing Props
+
+<Preview withToolbar withSource="open">
+  <Story name="With sizing">
+    <Box width={5} height={5}>
+      Box with sizing
+    </Box>
+  </Story>
+</Preview>
+
+## Component Props
+
+<Props of={Box} />
