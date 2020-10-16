@@ -1,12 +1,13 @@
 import styled from '@emotion/styled';
-import {
-  typography as typgraphyStyleProps,
-  TypographyProps,
-  compose,
-} from 'styled-system';
-import { variant } from 'styled-system';
+import { compose, variant } from 'styled-system';
 
-import { Base, BaseProps, baseStyleProps } from '../../system';
+import {
+  Base,
+  BaseProps,
+  baseStyleProps,
+  TypographyProps,
+  typographyStyleProps,
+} from '../../system';
 
 export type TextProps = {
   variant: 'body' | 'caption' | 'label';
@@ -42,7 +43,7 @@ const textVariants = variant({
 });
 
 export const Text = styled(Base)<TextProps>(
-  compose(...baseStyleProps, typgraphyStyleProps, textVariants)
+  compose(...baseStyleProps, ...typographyStyleProps, textVariants)
 );
 
 Text.defaultProps = {
