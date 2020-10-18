@@ -3,6 +3,7 @@ import { compose } from 'styled-system';
 
 import { Base, BaseProps, baseStyleProps } from '../../system';
 
+// Test
 export type BoxProps = BaseProps;
 
 /**
