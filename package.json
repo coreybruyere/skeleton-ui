@@ -1,5 +1,4 @@
 {
-  "name": "nail-polish",
   "version": "0.1.0",
   "main": "index.js",
   "author": "Corey Bruyere",
@@ -21,17 +20,15 @@
   "workspaces": [
     "packages/*"
   ],
-  "dependencies": {
-    "@types/theme-ui": "^0.3.6"
-  },
   "scripts": {
     "start": "npm run storybook",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "bootstrap": "lerna exec npm install"
+    "bootstrap": "lerna exec npm install",
+    "publish": "lerna run build && lerna publish"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/coreybruyere/nail-polish.git"
+    "url": "git://github.com/coreybruyere/skeleton-ui.git"
   }
 }
