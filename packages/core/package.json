@@ -1,6 +1,6 @@
 {
   "name": "@skeleton-ui/core",
-  "version": "0.1.0",
+  "version": "0.1.0-alpha.0",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
@@ -47,12 +47,12 @@
     "typescript": "^4.0.2"
   },
   "dependencies": {
-    "deepmerge": "^4.2.2",
     "@emotion/core": "^10.0.0",
     "@emotion/styled": "^10.0.0",
     "@styled-system/css": "^5.1.2",
     "@styled-system/should-forward-prop": "^5.1.2",
     "@styled-system/space": "^5.1.2",
+    "deepmerge": "^4.2.2",
     "theme-ui": "^0.4.0-rc.5"
   }
 }
