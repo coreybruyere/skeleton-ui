@@ -7,9 +7,6 @@ import { theme as defaultTheme } from '../../theme';
 
 const merge = require('deepmerge');
 
-// export type HaikuThemeProviderProps = React.PropsWithChildren<{}> &
-//   Partial<ThemeDecoratorProps<typeof defaultTheme>>;
-
 export const ThemeProvider = (props: ThemeDecoratorProps) => {
   const { children, theme } = props;
   const mergedTheme = theme ? merge(defaultTheme, theme) : defaultTheme;
