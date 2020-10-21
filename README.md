@@ -19,3 +19,8 @@ Optionally install `@hart/haiku-icons` if you're in need of any of Haiku's SVG i
 ```bash
 npm install @hart/haiku-icons
 ``` -->
+
+## To-do:
+
+- Document yalc process in CONTRIBUTING
+- Figure out Props of issue in MDX files
