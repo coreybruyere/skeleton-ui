@@ -11,6 +11,16 @@ module.exports = {
         allowSyntheticDefaultImports: false,
         esModuleInterop: false,
       },
+      propFilter: (prop) => {
+        if (prop.parent) {
+          return (
+            !prop.parent.fileName.includes("react") &&
+            !prop.parent.fileName.includes("styled-components")
+          );
+        }
+
+        return true;
+      },
     },
   },
 };
