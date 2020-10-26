@@ -2,7 +2,7 @@ import React from "react";
 import logo from "./logo.svg";
 import "./App.css";
 
-import { Button } from "core";
+import { Button, Link } from "@skeleton-ui/core";
 
 function App() {
   return (
@@ -15,6 +15,7 @@ function App() {
         <Button variant="primary">hello</Button>
         <Button variant="bare">hello</Button>
         <Button variant="secondary">secondary</Button>
+        <Link variant="label">A Label</Link>
 
         <a
           className="App-link"
