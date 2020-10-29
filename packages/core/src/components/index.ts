@@ -3,6 +3,7 @@ export * from './Button';
 export * from './Flex';
 export * from './Grid';
 export * from './Input';
+export * from './Label';
 export * from './Link';
 export * from './Text';
 

@@ -1,14 +1,13 @@
 import React, { forwardRef } from 'react';
 import { StyledComponent } from '@emotion/styled';
 
-import { BaseProps, TypographyProps } from 'system';
 import * as S from './styles';
 
-export type StyledButtonProps = React.ComponentPropsWithoutRef<'button'> &
-  BaseProps &
-  TypographyProps;
-
-export type ButtonProps = StyledComponent<'button', any, StyledButtonProps> & {
+export type ButtonProps = StyledComponent<
+  'button',
+  any,
+  S.StyledButtonProps
+> & {
   isLoading?: boolean;
   variant?: 'primary' | 'secondary' | 'bare';
 };

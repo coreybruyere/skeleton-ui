@@ -21,6 +21,7 @@ const defaultLinkStyles = {
   color: 'primary',
 };
 
+/* Links don't use the Text component since they have unique variants */
 const linkVariants = variant({
   variants: {
     nav: {

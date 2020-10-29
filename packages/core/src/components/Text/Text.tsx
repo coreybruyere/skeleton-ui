@@ -10,9 +10,11 @@ import {
 } from '../../system';
 
 export type TextProps = {
-  variant: 'body' | 'caption' | 'label';
+  variant?: 'body' | 'caption' | 'label';
 } & BaseProps &
   TypographyProps;
+
+export const textStyleProps = [...typographyStyleProps, ...baseStyleProps];
 
 const defaultextStyles = {
   fontFamily: 'body',
@@ -23,7 +25,7 @@ const defaultextStyles = {
   mb: 0,
 };
 
-const textVariants = variant({
+export const textVariants = variant({
   variants: {
     body: {
       ...defaultextStyles,
@@ -43,7 +45,7 @@ const textVariants = variant({
 });
 
 export const Text = styled(Base)<TextProps>(
-  compose(...baseStyleProps, ...typographyStyleProps, textVariants)
+  compose(...textStyleProps, textVariants)
 );
 
 Text.defaultProps = {

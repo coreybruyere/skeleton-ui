@@ -1,13 +1,18 @@
 import styled from '@emotion/styled';
 import { compose, variant } from 'styled-system';
 
-import { StyledButtonProps } from './Button';
 import {
-  shouldForwardProp,
+  Base,
+  BaseProps,
   baseStyleProps,
+  TypographyProps,
   typographyStyleProps,
+  shouldForwardProp,
 } from '../../system';
-import { Box } from '../../components/Box';
+
+export type StyledButtonProps = React.ComponentPropsWithoutRef<'button'> &
+  BaseProps &
+  TypographyProps;
 
 const defaultextStyles = {
   fontFamily: 'body',
@@ -34,7 +39,7 @@ const buttonVariants = variant({
   },
 });
 
-export const Button = styled(Box, {
+export const Button = styled(Base, {
   shouldForwardProp,
 })<StyledButtonProps>(
   compose(...baseStyleProps, ...typographyStyleProps, buttonVariants)
