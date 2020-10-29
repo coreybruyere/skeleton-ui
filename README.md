@@ -1,6 +1,6 @@
 # Skeleton UI Design System Kit ☠️💀
 
-A starter _skeleton_ giving you the _bare bones_ needed to get up and running with your design system.
+A starter _skeleton_ that gives **you** the _bare bones_ needed to get up and running with your design system.
 
 ## Contributing
 
