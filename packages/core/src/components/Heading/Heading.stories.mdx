@@ -1,0 +1,29 @@
+import {
+  Meta,
+  Story,
+  Props,
+  Preview,
+  Subtitle,
+} from '@storybook/addon-docs/blocks';
+
+import { Heading } from './Heading';
+
+<Meta title="Components/aa" component={Heading} />
+
+# Heading
+
+<Subtitle>Heading</Subtitle>
+<Preview withToolbar withSource="open">
+  <Story name="Base">
+    <Heading>hi</Heading>
+  </Story>
+</Preview>
+<Preview withToolbar withSource="open">
+  <Story name="With responsive columns">
+    <Heading>hello</Heading>
+  </Story>
+</Preview>
+
+## Component Props
+
+<Props of={Heading} />
