@@ -8,19 +8,27 @@ import {
 
 import { Heading } from './Heading';
 
-<Meta title="Components/aa" component={Heading} />
+<Meta title="Components/Heading" component={Heading}></Meta>
 
 # Heading
 
 <Subtitle>Heading</Subtitle>
-<Preview withToolbar withSource="open">
+
+<Preview  withSource="open">
   <Story name="Base">
-    <Heading>hi</Heading>
+    <Heading>H1 heading</Heading>
   </Story>
 </Preview>
-<Preview withToolbar withSource="open">
-  <Story name="With responsive columns">
-    <Heading>hello</Heading>
+
+<Preview  withSource="open">
+  <Story name="With as prop">
+    <Heading as="h5">H5 heading styled as H1</Heading>
+  </Story>
+</Preview>
+
+<Preview  withSource="open">
+  <Story name="With variant">
+    <Heading variant="h2" as="h5">H5 heading styled as H2</Heading>
   </Story>
 </Preview>
 
