@@ -153,16 +153,14 @@ export const theme = {
     monospace: 'Menlo, monospace',
   },
   fontSizes: [
-    '0.625rem',
-    '0.75rem',
-    '1rem',
-    '1.125rem',
-    '1.25rem',
-    '1.5rem',
-    '1.75rem',
-    '2rem',
-    '2.5rem',
-    '3rem',
+    '0.75rem', // 12px
+    '1rem', // 16px
+    '1.25rem', // 20px
+    '1.5rem', // 24px
+    '1.75rem', // 28px
+    '2.25rem', // 36px
+    '2.625rem', // 42px
+    '3rem', // 48px
   ],
   fontWeights: {
     body: 400,
