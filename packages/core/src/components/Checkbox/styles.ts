@@ -14,9 +14,6 @@ export type StyledCheckboxProps = React.ComponentPropsWithoutRef<'input'> &
   BaseProps &
   TypographyProps;
 
-
 export const Checkbox = styled(Base, {
   shouldForwardProp,
-})<StyledCheckboxProps>(
-  compose(...baseStyleProps, ...typographyStyleProps)
-);
+})<StyledCheckboxProps>(compose(...baseStyleProps, ...typographyStyleProps));
