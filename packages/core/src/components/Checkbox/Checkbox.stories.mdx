@@ -1,0 +1,22 @@
+import {
+  Meta,
+  Story,
+  Props,
+  Preview,
+  Subtitle,
+} from '@storybook/addon-docs/blocks';
+// This isn't documented anywhere, but look into storybook docs exports: https://github.com/storybookjs/storybook/blob/master/addons/docs/src/blocks/index.ts
+
+import { Checkbox } from './Checkbox';
+
+<Meta title="Components/Checkbox" component={Checkbox}></Meta>
+
+# Checkbox
+
+<Subtitle>Checkbox</Subtitle>
+
+<Preview withToolbar withSource="open">
+  <Story name="Base">
+    <Checkbox />
+  </Story>
+</Preview>
