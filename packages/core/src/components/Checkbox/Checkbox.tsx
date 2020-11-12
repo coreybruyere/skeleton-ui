@@ -11,6 +11,11 @@ export type CheckboxProps = StyledComponent<
 
 export const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(
   ({ children, ...rest }, ref) => (
-    <S.Checkbox as={'input'} type="checkbox" ref={ref as any} {...rest} />
+    <S.Label>
+      <>
+        {children}
+        <S.Checkbox as={'input'} type="checkbox" ref={ref as any} {...rest} />
+      </>
+    </S.Label>
   )
 );
