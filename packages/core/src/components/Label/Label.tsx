@@ -1,14 +1,23 @@
 import React, { forwardRef } from 'react';
-import { StyledComponent } from '@emotion/styled';
+import styled from '@emotion/styled';
+import { compose } from 'styled-system';
 
-import * as S from './styles';
+import { shouldForwardProp } from '../../system';
+import { Text, TextProps, textStyleProps } from '../Text';
 
-export type LabelProps = StyledComponent<'label', any, S.StyledLabelProps>;
+export type StyledLabelProps = React.ComponentPropsWithoutRef<'label'> &
+  TextProps;
+
+export const StyledLabel = styled(Text, {
+  shouldForwardProp,
+})<StyledLabelProps>(compose(...textStyleProps));
+
+export type LabelProps = StyledLabelProps;
 
 export const Label = forwardRef<HTMLLabelElement, LabelProps>(
   ({ children, ...rest }, ref) => (
-    <S.Label as={'label'} ref={ref as any} {...rest}>
+    <StyledLabel as={'label'} ref={ref as any} {...rest}>
       {children}
-    </S.Label>
+    </StyledLabel>
   )
 );

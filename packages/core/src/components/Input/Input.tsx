@@ -1,20 +1,23 @@
 import React, { forwardRef } from 'react';
-import { StyledComponent } from '@emotion/styled';
+import styled from '@emotion/styled';
 
-import { BoxProps } from 'components';
-import * as S from './styles';
+import { Base, BaseProps, shouldForwardProp } from '../../system';
 
 export type StyledInputProps = React.ComponentPropsWithoutRef<'input'> &
-  BoxProps & {
-    isLoading?: boolean;
-  };
+  BaseProps;
 
-export type InputProps = StyledComponent<'input', any, StyledInputProps>;
+export const StyledInput = styled(Base, {
+  shouldForwardProp,
+})<StyledInputProps>`
+  color: red;
+`;
+
+export type InputProps = StyledInputProps;
 
 export const Input = forwardRef<HTMLInputElement, InputProps>(
   ({ children, ...rest }, ref) => (
-    <S.Input as={'input'} ref={ref as any} {...rest}>
+    <StyledInput as={'input'} ref={ref as any} {...rest}>
       {children}
-    </S.Input>
+    </StyledInput>
   )
 );

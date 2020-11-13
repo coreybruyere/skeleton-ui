@@ -1,21 +1,60 @@
 import React, { forwardRef } from 'react';
-import { StyledComponent } from '@emotion/styled';
+import styled from '@emotion/styled';
+import { compose, variant } from 'styled-system';
 
-import * as S from './styles';
+import {
+  Base,
+  BaseProps,
+  baseStyleProps,
+  TypographyProps,
+  typographyStyleProps,
+  shouldForwardProp,
+} from '../../system';
 
-export type ButtonProps = StyledComponent<
-  'button',
-  any,
-  S.StyledButtonProps
-> & {
+const defaultextStyles = {
+  fontFamily: 'body',
+  fontWeight: 'body',
+  lineHeight: 'body',
+  color: 'text',
+  mt: 0,
+  mb: 0,
+};
+
+const buttonVariants = variant({
+  variants: {
+    primary: {
+      ...defaultextStyles,
+      fontSize: 3,
+    },
+    secondary: {
+      ...defaultextStyles,
+      fontSize: 1,
+    },
+    bare: {
+      p: 0,
+    },
+  },
+});
+
+export type StyledButtonProps = React.ComponentPropsWithoutRef<'button'> &
+  BaseProps &
+  TypographyProps;
+
+const StyledButton = styled(Base, {
+  shouldForwardProp,
+})<StyledButtonProps>(
+  compose(...baseStyleProps, ...typographyStyleProps, buttonVariants)
+);
+
+export type ButtonProps = StyledButtonProps & {
   isLoading?: boolean;
   variant?: 'primary' | 'secondary' | 'bare';
 };
 
 export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
   ({ children, variant = 'primary', ...rest }, ref) => (
-    <S.Button as={'button'} variant={variant} ref={ref as any} {...rest}>
+    <StyledButton as={'button'} variant={variant} ref={ref as any} {...rest}>
       {children}
-    </S.Button>
+    </StyledButton>
   )
 );
