@@ -1,21 +1,21 @@
 import React, { forwardRef } from 'react';
-import { StyledComponent } from '@emotion/styled';
+import styled from '@emotion/styled';
 
-import * as S from './styles';
+import { Base, BaseProps, shouldForwardProp } from '../../system';
 
-export type CheckboxProps = StyledComponent<
-  'checkbox',
-  any,
-  S.StyledCheckboxProps
->;
+export type StyledCheckboxProps = React.ComponentPropsWithoutRef<'input'> &
+  BaseProps;
+
+export const StyledCheckbox = styled(Base, {
+  shouldForwardProp,
+})<StyledCheckboxProps>`
+  color: red;
+`;
+
+export type CheckboxProps = StyledCheckboxProps;
 
 export const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(
   ({ children, ...rest }, ref) => (
-    <S.Label>
-      <>
-        {children}
-        <S.Checkbox as={'input'} type="checkbox" ref={ref as any} {...rest} />
-      </>
-    </S.Label>
+    <StyledCheckbox as={'input'} type="checkbox" ref={ref as any} {...rest} />
   )
 );
