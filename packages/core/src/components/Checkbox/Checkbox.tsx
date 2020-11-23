@@ -1,3 +1,5 @@
+/** @jsx jsx */
+import { jsx } from 'theme-ui';
 import React, { forwardRef } from 'react';
 import styled from '@emotion/styled';
 import { css } from '@emotion/css';
@@ -12,7 +14,7 @@ export type StyledCheckboxProps = React.ComponentPropsWithoutRef<'input'> &
   };
 
 const checkboxIconStyles = (props: any) => css`
-  color: 'red';
+  cursor: pointer;
 
   &:hover {
     color: ${props.error
@@ -71,11 +73,10 @@ const Unchecked = styled(UncheckedIcon)`
 `;
 
 const CheckboxIcon = (props: any) => (
-  <>
+  <React.Fragment>
     <Checked {...props} />
-
     <Unchecked {...props} />
-  </>
+  </React.Fragment>
 );
 
 export const StyledCheckbox = styled(Base, {
@@ -86,7 +87,7 @@ export type CheckboxProps = StyledCheckboxProps;
 
 export const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(
   ({ children, disabled, error, ...rest }, ref) => (
-    <Label>
+    <Label sx={{ cursor: 'pointer' }}>
       <Flex>
         <StyledCheckbox
           as={'input'}
