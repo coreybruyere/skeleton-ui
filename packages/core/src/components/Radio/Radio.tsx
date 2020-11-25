@@ -4,11 +4,11 @@ import React, { forwardRef } from 'react';
 import styled from '@emotion/styled';
 import { css } from '@emotion/css';
 
-import { Base, BaseProps, shouldForwardProp } from '../../system';
-import { Box, Flex, Label } from '../../components';
+import { shouldForwardProp } from '../../system';
+import { Box, BoxProps, Flex, Label } from '../../components';
 
 export type StyledRadioProps = React.ComponentPropsWithoutRef<'input'> &
-  BaseProps & {
+  BoxProps & {
     label: string;
     disabled?: boolean;
     error?: boolean;
@@ -78,7 +78,7 @@ const RadioIcon = (props: any) => (
   </React.Fragment>
 );
 
-export const StyledRadio = styled(Base, {
+export const StyledRadio = styled(Box, {
   shouldForwardProp,
 })<StyledRadioProps>``;
 

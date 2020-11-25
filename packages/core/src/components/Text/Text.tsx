@@ -2,16 +2,16 @@ import styled from '@emotion/styled';
 import { compose, variant } from 'styled-system';
 
 import {
-  Base,
-  BaseProps,
   baseStyleProps,
   TypographyProps,
   typographyStyleProps,
 } from '../../system';
 
+import { Box, BoxProps } from '../../components';
+
 export type TextProps = {
   variant?: 'body' | 'caption' | 'label';
-} & BaseProps &
+} & BoxProps &
   TypographyProps;
 
 export const textStyleProps = [...typographyStyleProps, ...baseStyleProps];
@@ -44,7 +44,7 @@ export const textVariants = variant({
   },
 });
 
-export const Text = styled(Base)<TextProps>(
+export const Text = styled(Box)<TextProps>(
   compose(...textStyleProps, textVariants)
 );
 
