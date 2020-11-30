@@ -5,7 +5,9 @@ import styled from '@emotion/styled';
 import { css } from '@emotion/css';
 
 import { shouldForwardProp } from '../../system';
-import { Box, BoxProps, Flex, Label } from '../../components';
+import { Box, BoxProps } from '../Box';
+import { Flex } from '../Flex';
+import { Label } from '../Label';
 
 export type StyledRadioProps = React.ComponentPropsWithoutRef<'input'> &
   BoxProps & {

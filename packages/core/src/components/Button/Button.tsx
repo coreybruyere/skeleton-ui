@@ -3,7 +3,7 @@ import styled from '@emotion/styled';
 import { compose, variant } from 'styled-system';
 
 import { TypographyProps, typographyStyleProps } from '../../system';
-import { Box, BoxProps } from '../../components/Box';
+import { Box, BoxProps } from '../Box';
 
 const defaultextStyles = {
   fontFamily: 'body',

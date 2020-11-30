@@ -2,7 +2,7 @@ import styled from '@emotion/styled';
 import { compose, variant } from 'styled-system';
 
 import { TypographyProps, typographyStyleProps } from '../../system';
-import { Box, BoxProps } from '../../components/Box';
+import { Box, BoxProps } from '../Box';
 
 export type HeadingProps = {
   variant: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';

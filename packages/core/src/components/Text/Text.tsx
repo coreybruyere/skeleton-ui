@@ -7,7 +7,7 @@ import {
   typographyStyleProps,
 } from '../../system';
 
-import { Box, BoxProps } from '../../components';
+import { Box, BoxProps } from '../Box';
 
 export type TextProps = {
   variant?: 'body' | 'caption' | 'label';

@@ -5,7 +5,7 @@ import {
   compose,
 } from 'styled-system';
 
-import { Box, BoxProps } from '../../components/Box';
+import { Box, BoxProps } from '../Box';
 
 export type GridProps = BoxProps & _GridProps;
 

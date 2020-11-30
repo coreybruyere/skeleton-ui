@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 
 import { shouldForwardProp } from '../../system';
-import { Box, BoxProps } from '../../components';
+import { Box, BoxProps } from '../Box';
 
 export type FlexProps = BoxProps;
 

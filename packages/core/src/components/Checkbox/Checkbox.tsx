@@ -5,9 +5,9 @@ import styled from '@emotion/styled';
 import { css } from '@emotion/css';
 
 import { shouldForwardProp } from '../../system';
-import { Box, BoxProps } from '../../components/Box';
-import { Flex } from '../../components/Flex';
-import { Label } from '../../components/Label';
+import { Box, BoxProps } from '../Box';
+import { Flex } from '../Flex';
+import { Label } from '../Label';
 
 export type StyledCheckboxProps = React.ComponentPropsWithoutRef<'input'> &
   BoxProps & {
