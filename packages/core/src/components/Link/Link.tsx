@@ -1,17 +1,12 @@
 import styled from '@emotion/styled';
 import { compose, variant } from 'styled-system';
 
-import {
-  Base,
-  BaseProps,
-  baseStyleProps,
-  TypographyProps,
-  typographyStyleProps,
-} from '../../system';
+import { TypographyProps, typographyStyleProps } from '../../system';
+import { Box, BoxProps } from '../../components/Box';
 
 export type LinkProps = {
   variant: 'default' | 'nav';
-} & BaseProps &
+} & BoxProps &
   TypographyProps;
 
 const defaultLinkStyles = {
@@ -35,8 +30,8 @@ const linkVariants = variant({
   },
 });
 
-export const Link = styled(Base)<LinkProps>(
-  compose(...baseStyleProps, ...typographyStyleProps, linkVariants)
+export const Link = styled(Box)<LinkProps>(
+  compose(...typographyStyleProps, linkVariants)
 );
 
 Link.defaultProps = {

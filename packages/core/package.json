@@ -39,6 +39,7 @@
     "@types/styled-system": "^5.1.10",
     "@types/styled-system__should-forward-prop": "^5.1.1",
     "@types/theme-ui": "^0.3.7",
+    "@types/react": "^17.0.0",
     "husky": "^4.2.5",
     "react": "^16.13.1",
     "tsdx": "^0.13.2",
@@ -47,13 +48,13 @@
   },
   "dependencies": {
     "@emotion/core": "^11.0.0",
-    "@emotion/styled": "^11.0.0",
     "@emotion/css": "^11.0.0",
+    "@emotion/styled": "^11.0.0",
     "@styled-system/css": "^5.1.2",
     "@styled-system/should-forward-prop": "^5.1.2",
     "@styled-system/space": "^5.1.2",
     "deepmerge": "^4.2.2",
     "styled-system": "^5.1.2",
-    "theme-ui": "^0.4.0-rc.5"
+    "theme-ui": "^0.4.0-rc.14"
   }
 }

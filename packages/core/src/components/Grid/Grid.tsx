@@ -5,14 +5,14 @@ import {
   compose,
 } from 'styled-system';
 
-import { Base, BaseProps, baseStyleProps } from '../../system';
+import { Box, BoxProps } from '../../components/Box';
 
-export type GridProps = BaseProps & _GridProps;
+export type GridProps = BoxProps & _GridProps;
 
-export const Grid = styled(Base)<GridProps>(
+export const Grid = styled(Box)<GridProps>(
   {
     display: 'grid',
   },
 
-  compose(...baseStyleProps, gridStyleProps)
+  compose(gridStyleProps)
 );

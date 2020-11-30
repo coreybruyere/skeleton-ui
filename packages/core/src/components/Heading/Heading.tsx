@@ -1,17 +1,12 @@
 import styled from '@emotion/styled';
 import { compose, variant } from 'styled-system';
 
-import {
-  Base,
-  BaseProps,
-  baseStyleProps,
-  TypographyProps,
-  typographyStyleProps,
-} from '../../system';
+import { TypographyProps, typographyStyleProps } from '../../system';
+import { Box, BoxProps } from '../../components/Box';
 
 export type HeadingProps = {
   variant: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
-} & BaseProps &
+} & BoxProps &
   TypographyProps;
 
 const defaultHeadingStyles = {
@@ -52,8 +47,8 @@ const headingVariants = variant({
   },
 });
 
-export const Heading = styled(Base)<HeadingProps>(
-  compose(...baseStyleProps, ...typographyStyleProps, headingVariants)
+export const Heading = styled(Box)<HeadingProps>(
+  compose(...typographyStyleProps, headingVariants)
 );
 
 Heading.defaultProps = {
