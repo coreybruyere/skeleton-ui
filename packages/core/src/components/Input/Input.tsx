@@ -1,14 +1,12 @@
 import React, { forwardRef } from 'react';
 import styled from '@emotion/styled';
 
-import { Base, BaseProps, shouldForwardProp } from '../../system';
+import { Box, BoxProps } from '../Box';
 
 export type StyledInputProps = React.ComponentPropsWithoutRef<'input'> &
-  BaseProps;
+  BoxProps;
 
-export const StyledInput = styled(Base, {
-  shouldForwardProp,
-})<StyledInputProps>`
+export const StyledInput = styled(Box)<StyledInputProps>`
   color: red;
 `;
 

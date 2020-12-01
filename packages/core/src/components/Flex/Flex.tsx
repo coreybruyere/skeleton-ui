@@ -1,14 +1,10 @@
 import styled from '@emotion/styled';
-import { compose } from 'styled-system';
 
-import { Base, BaseProps, baseStyleProps } from '../../system';
+import { shouldForwardProp } from '../../system';
+import { Box, BoxProps } from '../Box';
 
-export type FlexProps = BaseProps;
+export type FlexProps = BoxProps;
 
-export const Flex = styled(Base)<FlexProps>(
-  {
-    display: 'flex',
-  },
-
-  compose(...baseStyleProps)
-);
+export const Flex = styled(Box, { shouldForwardProp })<FlexProps>({
+  display: 'flex',
+});

@@ -4,11 +4,13 @@ import React, { forwardRef } from 'react';
 import styled from '@emotion/styled';
 import { css } from '@emotion/css';
 
-import { Base, BaseProps, shouldForwardProp } from '../../system';
-import { Box, Flex, Label } from '../../components';
+import { shouldForwardProp } from '../../system';
+import { Box, BoxProps } from '../Box';
+import { Flex } from '../Flex';
+import { Label } from '../Label';
 
 export type StyledCheckboxProps = React.ComponentPropsWithoutRef<'input'> &
-  BaseProps & {
+  BoxProps & {
     disabled?: boolean;
     error?: boolean;
   };
@@ -79,7 +81,7 @@ const CheckboxIcon = (props: any) => (
   </React.Fragment>
 );
 
-export const StyledCheckbox = styled(Base, {
+export const StyledCheckbox = styled(Box, {
   shouldForwardProp,
 })<StyledCheckboxProps>``;
 
