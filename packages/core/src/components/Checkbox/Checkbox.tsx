@@ -88,6 +88,7 @@ export const StyledCheckbox = styled(Box, {
 
 export type CheckboxProps = StyledCheckboxProps;
 
+/* Add Optional label wrap, enabling consumer to specify if they need a label or not by passing a label string */
 export const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(
   ({ label, disabled, error, ...rest }, ref) => (
     <Label sx={{ cursor: 'pointer' }}>
