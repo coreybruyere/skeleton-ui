@@ -89,7 +89,7 @@ export type RadioProps = StyledRadioProps;
 export const Radio = forwardRef<HTMLInputElement, RadioProps>(
   ({ label, disabled, error, ...rest }, ref) => (
     <Label sx={{ cursor: 'pointer' }}>
-      <Flex>
+      <Flex alignItems="center">
         <StyledRadio
           as={'input'}
           type="radio"
@@ -109,7 +109,7 @@ export const Radio = forwardRef<HTMLInputElement, RadioProps>(
           disabled={disabled}
           error={error}
         />
-        {label}
+        <Box ml={1}>{label}</Box>
       </Flex>
     </Label>
   )

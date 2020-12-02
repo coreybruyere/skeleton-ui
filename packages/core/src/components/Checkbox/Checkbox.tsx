@@ -11,6 +11,7 @@ import { Label } from '../Label';
 
 export type StyledCheckboxProps = React.ComponentPropsWithoutRef<'input'> &
   BoxProps & {
+    label: string;
     disabled?: boolean;
     error?: boolean;
   };
@@ -88,9 +89,9 @@ export const StyledCheckbox = styled(Box, {
 export type CheckboxProps = StyledCheckboxProps;
 
 export const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(
-  ({ children, disabled, error, ...rest }, ref) => (
+  ({ label, disabled, error, ...rest }, ref) => (
     <Label sx={{ cursor: 'pointer' }}>
-      <Flex>
+      <Flex alignItems="center">
         <StyledCheckbox
           as={'input'}
           type="checkbox"
@@ -110,6 +111,7 @@ export const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(
           disabled={disabled}
           error={error}
         />
+        <Box ml={1}>{label}</Box>
       </Flex>
     </Label>
   )

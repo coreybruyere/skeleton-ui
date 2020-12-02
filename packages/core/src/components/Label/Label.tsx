@@ -16,7 +16,7 @@ export type LabelProps = StyledLabelProps;
 
 export const Label = forwardRef<HTMLLabelElement, LabelProps>(
   ({ children, ...rest }, ref) => (
-    <StyledLabel as={'label'} ref={ref as any} {...rest}>
+    <StyledLabel as={'label'} variant={'label'} ref={ref as any} {...rest}>
       {children}
     </StyledLabel>
   )
