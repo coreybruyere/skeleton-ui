@@ -8,6 +8,7 @@ import { shouldForwardProp } from '../../system';
 import { Box, BoxProps } from '../Box';
 import { Flex } from '../Flex';
 import { Label } from '../Label';
+import { ConditionalWrap } from '../ConditionalWrap';
 
 export type StyledRadioProps = React.ComponentPropsWithoutRef<'input'> &
   BoxProps & {
@@ -102,7 +103,12 @@ export type RadioProps = StyledRadioProps;
 
 export const Radio = forwardRef<HTMLInputElement, RadioProps>(
   ({ label, disabled, error, ...rest }, ref) => (
-    <Label sx={{ cursor: 'pointer' }}>
+    <ConditionalWrap
+      condition={label}
+      wrapper={(children: any) => (
+        <Label sx={{ cursor: 'pointer' }}>{children}</Label>
+      )}
+    >
       <Flex alignItems="center">
         <StyledRadio
           as={'input'}
@@ -123,8 +129,8 @@ export const Radio = forwardRef<HTMLInputElement, RadioProps>(
           disabled={disabled}
           error={error}
         />
-        <Box ml={1}>{label}</Box>
+        {label && <Box ml={1}>{label}</Box>}
       </Flex>
-    </Label>
+    </ConditionalWrap>
   )
 );

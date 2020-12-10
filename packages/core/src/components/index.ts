@@ -10,6 +10,7 @@ export * from './Link';
 export * from './Select';
 export * from './Text';
 
+export * from './ConditionalWrap';
+export * from './Global';
 export * from './Styled';
 export * from './ThemeProvider';
-export * from './Global';
