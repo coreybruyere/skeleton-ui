@@ -43,29 +43,31 @@ const radioIconStyles = (props: any) => css`
 `;
 
 const CheckedIcon = (props: any) => (
-  <svg
+  <Box
     version="1.1"
     xmlns="http://www.w3.org/2000/svg"
     width={16}
     height={16}
     viewBox="0 0 32 32"
+    as="svg"
     {...props}
   >
     <path d="M16 0c-8.837 0-16 7.163-16 16s7.163 16 16 16 16-7.163 16-16-7.163-16-16-16zM16 28c-6.627 0-12-5.373-12-12s5.373-12 12-12c6.627 0 12 5.373 12 12s-5.373 12-12 12zM10 16c0-3.314 2.686-6 6-6s6 2.686 6 6c0 3.314-2.686 6-6 6s-6-2.686-6-6z"></path>
-  </svg>
+  </Box>
 );
 
 const UncheckedIcon = (props: any) => (
-  <svg
+  <Box
     version="1.1"
     xmlns="http://www.w3.org/2000/svg"
     width={16}
     height={16}
     viewBox="0 0 32 32"
+    as="svg"
     {...props}
   >
     <path d="M16 0c-8.837 0-16 7.163-16 16s7.163 16 16 16 16-7.163 16-16-7.163-16-16-16zM16 28c-6.627 0-12-5.373-12-12s5.373-12 12-12c6.627 0 12 5.373 12 12s-5.373 12-12 12z"></path>
-  </svg>
+  </Box>
 );
 
 const Checked = styled(CheckedIcon)`
@@ -102,7 +104,10 @@ export const StyledRadio = styled(Box, {
 export type RadioProps = StyledRadioProps;
 
 export const Radio = forwardRef<HTMLInputElement, RadioProps>(
-  ({ label, disabled, error, ...rest }, ref) => (
+  (
+    { label, disabled, error, m, mt, mr, mb, ml, p, pt, pr, pb, pl, ...rest },
+    ref
+  ) => (
     <ConditionalWrap
       condition={label}
       wrapper={(children: any) => (
@@ -128,6 +133,16 @@ export const Radio = forwardRef<HTMLInputElement, RadioProps>(
           aria-hidden="true"
           disabled={disabled}
           error={error}
+          m={m}
+          mt={mt}
+          mr={mr}
+          mb={mb}
+          ml={ml}
+          p={p}
+          pt={pt}
+          pr={pr}
+          pb={pb}
+          pl={pl}
         />
         {label && <Box ml={1}>{label}</Box>}
       </Flex>

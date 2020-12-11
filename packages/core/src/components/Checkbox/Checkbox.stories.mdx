@@ -20,3 +20,12 @@ import { Checkbox } from './Checkbox';
     <Checkbox label="Item"/>
   </Story>
 </Preview>
+
+If no `label` prop is passed to the `<Radio>` you *must* wrap the `<Radio>` with a `<label>` element. 
+
+<Preview withToolbar withSource="open">
+  <Story name="With no label">
+    <Checkbox id="checkbox-1" name="example-1" /><Label htmlFor="checkbox-1">Label 1</Label>
+    <Checkbox id="checkbox-2" name="example-1" /><Label htmlFor="checkbox-2">Label 2</Label>
+  </Story>
+</Preview>

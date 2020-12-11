@@ -8,6 +8,7 @@ import { shouldForwardProp } from '../../system';
 import { Box, BoxProps } from '../Box';
 import { Flex } from '../Flex';
 import { Label } from '../Label';
+import { ConditionalWrap } from '../ConditionalWrap';
 
 export type StyledCheckboxProps = React.ComponentPropsWithoutRef<'input'> &
   BoxProps & {
@@ -102,10 +103,15 @@ export const StyledCheckbox = styled(Box, {
 
 export type CheckboxProps = StyledCheckboxProps;
 
-/* Add Optional label wrap, enabling consumer to specify if they need a label or not by passing a label string */
+/* Add console warning if label isn't passed. It IS optional but should only be omitted if consumer understands how to use */
 export const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(
   ({ label, disabled, error, ...rest }, ref) => (
-    <Label sx={{ cursor: 'pointer' }}>
+    <ConditionalWrap
+      condition={label}
+      wrapper={(children: any) => (
+        <Label sx={{ cursor: 'pointer' }}>{children}</Label>
+      )}
+    >
       <Flex alignItems="center">
         <StyledCheckbox
           as={'input'}
@@ -126,8 +132,8 @@ export const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(
           disabled={disabled}
           error={error}
         />
-        <Box ml={1}>{label}</Box>
+        {label && <Box ml={1}>{label}</Box>}
       </Flex>
-    </Label>
+    </ConditionalWrap>
   )
 );
