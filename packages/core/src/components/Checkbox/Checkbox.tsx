@@ -105,7 +105,10 @@ export type CheckboxProps = StyledCheckboxProps;
 
 /* Add console warning if label isn't passed. It IS optional but should only be omitted if consumer understands how to use */
 export const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(
-  ({ label, disabled, error, ...rest }, ref) => (
+  (
+    { label, disabled, error, m, mt, mr, mb, ml, p, pt, pr, pb, pl, ...rest },
+    ref
+  ) => (
     <ConditionalWrap
       condition={label}
       wrapper={(children: any) => (
@@ -131,6 +134,16 @@ export const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(
           aria-hidden="true"
           disabled={disabled}
           error={error}
+          m={m}
+          mt={mt}
+          mr={mr}
+          mb={mb}
+          ml={ml}
+          p={p}
+          pt={pt}
+          pr={pr}
+          pb={pb}
+          pl={pl}
         />
         {label && <Box ml={1}>{label}</Box>}
       </Flex>
