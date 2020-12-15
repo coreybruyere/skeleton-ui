@@ -8,6 +8,8 @@ import {
 // This isn't documented anywhere, but look into storybook docs exports: https://github.com/storybookjs/storybook/blob/master/addons/docs/src/blocks/index.ts
 
 import { Checkbox } from './Checkbox';
+import { Flex } from '../Flex';
+import { Label } from '../Label';
 
 <Meta title="Components/Checkbox" component={Checkbox}></Meta>
 
@@ -25,7 +27,13 @@ If no `label` prop is passed to the `<Radio>` you *must* wrap the `<Radio>` with
 
 <Preview withToolbar withSource="open">
   <Story name="With no label">
-    <Checkbox id="checkbox-1" name="example-1" /><Label htmlFor="checkbox-1">Label 1</Label>
-    <Checkbox id="checkbox-2" name="example-1" /><Label htmlFor="checkbox-2">Label 2</Label>
+    <Flex as={Label} htmlFor="checkbox-1">
+      <Checkbox id="checkbox-1" name="example-1" mr={2} />
+      Label 1
+    </Flex>
+    <Flex as={Label} htmlFor="checkbox-2">
+      <Checkbox id="checkbox-2" name="example-2" mr={2} />
+      Label 2
+    </Flex>
   </Story>
 </Preview>
