@@ -1,6 +1,5 @@
 import React, { forwardRef } from 'react';
 import styled from '@emotion/styled';
-import { css } from '@emotion/css';
 
 import { Box, BoxProps } from '../Box';
 
@@ -20,24 +19,26 @@ export type StyledDividerProps = React.ComponentPropsWithoutRef<'hr'> &
 export const StyledDivider = styled(Box)<StyledDividerProps>`
   overflow: visible;
   border: none;
-  border-top-width: 1px;
-  border-top-style: solid;
-  border-top-color: #a7b3be;
-  ${({ direction, height }) =>
+  background-color: #a7b3be;
+  ${({ direction }) =>
     direction === 'vertical' &&
-    css({
-      height: height,
-    })}
+    `
+      display: inline-block;
+      vertical-align: middle;
+    `};
 `;
 
 export type DividerProps = StyledDividerProps;
 
 export const Divider = forwardRef<HTMLHRElement, DividerProps>(
-  ({ direction = 'horizontal', height = 0, ...rest }, ref) => (
+  ({ direction = 'horizontal', height, ...rest }, ref) => (
     <StyledDivider
       as={'hr'}
       direction={direction}
-      height={height}
+      height={direction === 'vertical' ? '16px' : 1}
+      width={direction === 'vertical' ? '1px' : 'auto'}
+      mx={direction === 'vertical' ? 2 : 0}
+      my={direction === 'horizontal' ? 2 : 0}
       ref={ref as any}
       role="separator"
       {...rest}
