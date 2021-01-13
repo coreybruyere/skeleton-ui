@@ -1,13 +1,17 @@
 import React from 'react';
-import {
-  ThemeProvider as ThemeDecorator,
-  ThemeProviderProps as ThemeDecoratorProps,
-} from '@theme-ui/core';
+import { ThemeProvider as ThemeDecorator } from '@theme-ui/core';
 import { theme as defaultTheme } from '../../theme';
 
 const merge = require('deepmerge');
 
-export const ThemeProvider = (props: ThemeDecoratorProps) => {
+type Theme = typeof defaultTheme;
+
+export interface ThemeProviderProps {
+  theme: Theme | ((outerTheme: Theme) => Theme);
+  children?: React.ReactNode;
+}
+
+export const ThemeProvider = (props: ThemeProviderProps) => {
   const { children, theme } = props;
   const mergedTheme = theme ? merge(defaultTheme, theme) : defaultTheme;
 
