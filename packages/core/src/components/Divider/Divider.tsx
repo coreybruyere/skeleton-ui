@@ -41,6 +41,7 @@ export const Divider = forwardRef<HTMLHRElement, DividerProps>(
       my={direction === 'horizontal' ? 2 : 0}
       ref={ref as any}
       role="separator"
+      aria-orientation={direction}
       {...rest}
     />
   )
