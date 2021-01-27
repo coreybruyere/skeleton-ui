@@ -9,23 +9,30 @@ const defaultextStyles = {
   fontFamily: 'body',
   fontWeight: 'body',
   lineHeight: 'body',
-  color: 'text',
+  color: '#fff',
   mt: 0,
   mb: 0,
+  border: 0,
+  cursor: 'pointer',
 };
 
 const buttonVariants = variant({
   variants: {
     primary: {
       ...defaultextStyles,
-      fontSize: 3,
+      fontSize: 1,
+      bg: 'primary',
     },
     secondary: {
       ...defaultextStyles,
       fontSize: 1,
+      bg: 'secondary',
     },
     bare: {
       p: 0,
+      bg: 'transparent',
+      border: 0,
+      cursor: 'pointer',
     },
   },
 });
