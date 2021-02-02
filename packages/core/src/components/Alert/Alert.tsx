@@ -3,7 +3,8 @@ import styled from '@emotion/styled';
 import { compose, variant } from 'styled-system';
 
 import { TypographyProps, typographyStyleProps } from '../../system';
-import { Box, BoxProps } from '../Box';
+import { Flex, FlexProps } from '../Flex';
+import { Button } from '../Button';
 
 const defaultextStyles = {
   fontFamily: 'body',
@@ -38,21 +39,22 @@ const alertVariants = variant({
 
 export type StyledAlertProps = React.ComponentPropsWithoutRef<'div'> &
   TypographyProps &
-  BoxProps;
+  FlexProps;
 
-const StyledAlert = styled(Box)<AlertProps>(
+const StyledAlert = styled(Flex)<AlertProps>(
   compose(...typographyStyleProps, alertVariants)
 );
 
 export type AlertProps = StyledAlertProps & {
-  isLoading?: boolean;
+  isDismissable?: boolean;
   variant?: 'primary' | 'secondary' | 'bare';
 };
 
 export const Alert = forwardRef<HTMLDivElement, AlertProps>(
-  ({ children, variant = 'primary', ...rest }, ref) => (
+  ({ children, variant = 'primary', isDismissable = true, ...rest }, ref) => (
     <StyledAlert variant={variant} ref={ref as any} {...rest}>
       {children}
+      {isDismissable && <Button variant="bare">x</Button>}
     </StyledAlert>
   )
 );
