@@ -26,4 +26,4 @@ npm install @hart/haiku-icons
 - Figure out Props of issue in MDX files
 - Update README in individual packages 
 - Document usage (Use as template or import)
-- Add simple library component
+- Add simple icon component
