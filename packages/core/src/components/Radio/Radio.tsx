@@ -110,7 +110,7 @@ export const Radio = forwardRef<HTMLInputElement, RadioProps>(
   ) => (
     <ConditionalWrap
       condition={label}
-      wrapper={(children: any) => (
+      wrapper={(children: React.ReactNode) => (
         <Label sx={{ cursor: 'pointer' }}>{children}</Label>
       )}
     >
