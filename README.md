@@ -24,6 +24,7 @@ npm install @hart/haiku-icons
 
 - Document yalc process in CONTRIBUTING
 - Figure out Props of issue in MDX files
-- Update README in individual packages 
+- Update README in individual packages
 - Document usage (Use as template or import)
 - Add simple icon component
+- Add context provider for alert state
