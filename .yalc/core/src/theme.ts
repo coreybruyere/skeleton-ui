@@ -177,6 +177,7 @@ export const theme = {
     primary: '#07c',
     secondary: '#30c',
     muted: '#f6f6f6',
+    border: '#c3c3c3',
   },
   text: {
     heading: {
