@@ -52,7 +52,12 @@ export type ButtonProps = StyledButtonProps & {
 
 export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
   ({ children, variant = 'primary', ...rest }, ref) => (
-    <StyledButton as={'button'} variant={variant} ref={ref as any} {...rest}>
+    <StyledButton
+      as={'button'}
+      variant={variant}
+      ref={ref as any}
+      {...(rest as any)}
+    >
       {children}
     </StyledButton>
   )
