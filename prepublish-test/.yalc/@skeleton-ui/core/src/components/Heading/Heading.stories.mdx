@@ -1,0 +1,48 @@
+import {
+  Meta,
+  Story,
+  Props,
+  Preview,
+  Subtitle,
+} from '@storybook/addon-docs/blocks';
+
+import { Heading } from './Heading';
+
+<Meta title="Components/Heading" component={Heading}></Meta>
+
+# Heading
+
+<Subtitle>Heading</Subtitle>
+
+<Preview  withSource="open">
+  <Story name="Base">
+    <Heading>H1 heading</Heading>
+  </Story>
+</Preview>
+
+<Preview  withSource="open">
+  <Story name="With as prop">
+    <Heading as="h5">H5 heading styled as H1</Heading>
+  </Story>
+</Preview>
+
+<Preview  withSource="open">
+  <Story name="With variant">
+    <Heading variant="h2" as="h5">H5 heading styled as H2</Heading>
+  </Story>
+</Preview>
+
+<Preview  withSource="open">
+  <Story name="All Headings">
+    <Heading>H1 heading</Heading>
+    <Heading variant="h2">H1 heading</Heading>
+    <Heading variant="h3">H1 heading</Heading>
+    <Heading variant="h4">H1 heading</Heading>
+    <Heading variant="h5">H1 heading</Heading>
+    <Heading variant="h6">H1 heading</Heading>
+  </Story>
+</Preview>
+
+## Component Props
+
+<Props of={Heading} />

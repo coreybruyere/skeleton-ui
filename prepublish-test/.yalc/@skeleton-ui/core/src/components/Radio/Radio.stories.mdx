@@ -1,0 +1,41 @@
+import {
+  Meta,
+  Story,
+  Props,
+  Preview,
+  Subtitle,
+} from '@storybook/addon-docs/blocks';
+// This isn't documented anywhere, but look into storybook docs exports: https://github.com/storybookjs/storybook/blob/master/addons/docs/src/blocks/index.ts
+
+import { Radio } from './Radio';
+import { Label } from '../Label';
+import { Flex } from '../Flex';
+
+
+
+<Meta title="Components/Radio" component={Radio}></Meta>
+
+# Radio
+
+<Subtitle>Radio</Subtitle>
+
+<Preview withToolbar withSource="open">
+  <Story name="Base">
+    <Radio label="Item" />
+  </Story>
+</Preview>
+
+If no `label` prop is passed to the `<Radio>` you *must* wrap the `<Radio>` with a `<label>` element. 
+
+<Preview withToolbar withSource="open">
+  <Story name="With no label">
+    <Flex as={Label} htmlFor="radio-1">
+      <Radio id="radio-1" name="example-1" mr={2} />
+      Label 1
+    </Flex>
+    <Flex as={Label} htmlFor="radio-2">
+      <Radio id="radio-2" name="example-1"  mr={2} />
+      Label 2
+    </Flex>
+  </Story>
+</Preview>

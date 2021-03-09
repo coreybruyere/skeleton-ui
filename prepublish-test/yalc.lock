@@ -1,0 +1,9 @@
+{
+  "version": "v1",
+  "packages": {
+    "@skeleton-ui/core": {
+      "signature": "e6b54a87e025afdc89f78ec8b278b907",
+      "file": true
+    }
+  }
+}

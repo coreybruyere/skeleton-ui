@@ -1,0 +1,31 @@
+import {
+  Meta,
+  Story,
+  Props,
+  Preview,
+  Subtitle,
+} from '@storybook/addon-docs/blocks';
+// This isn't documented anywhere, but look into storybook docs exports: https://github.com/storybookjs/storybook/blob/master/addons/docs/src/blocks/index.ts
+
+import { Divider } from './Divider';
+
+<Meta title="Components/Divider" component={Divider}></Meta>
+
+# Divider
+
+<Subtitle>Divider</Subtitle>
+
+<Preview withToolbar withSource="open">
+  <Story name="Base">
+    <Divider/>
+  </Story>
+</Preview>
+
+<Preview withToolbar withSource="open">
+  <Story name="With direction prop">
+    <span>Separated by</span>
+    <Divider direction="vertical" />
+    <span>a divider</span>
+  </Story>
+</Preview>
+
