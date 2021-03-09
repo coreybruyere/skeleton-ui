@@ -1,6 +1,6 @@
 {
   "name": "@skeleton-ui/core",
-  "version": "0.2.0-alpha.0+f7d3fe6f",
+  "version": "0.2.0-alpha.0+6cdc77e1",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
@@ -18,9 +18,6 @@
     "lint": "tsdx lint",
     "prepare": "tsdx build"
   },
-  "peerDependencies": {
-    "react": ">=16"
-  },
   "husky": {
     "hooks": {
       "pre-commit": "tsdx lint"
@@ -36,14 +33,22 @@
   "module": "dist/core.esm.js",
   "dependencies": {
     "@emotion/core": "^11.0.0",
-    "@emotion/css": "^11.0.0",
-    "@emotion/styled": "^11.0.0",
+    "@emotion/css": "^11.1.3",
+    "@emotion/react": "^11.1.5",
+    "@emotion/styled": "^11.1.5",
     "@styled-system/css": "^5.1.5",
     "@styled-system/should-forward-prop": "^5.1.5",
     "@styled-system/space": "^5.1.2",
+    "@types/react": "^17.0.0",
+    "@types/styled-system": "^5.1.10",
+    "@types/styled-system__should-forward-prop": "^5.1.2",
+    "@types/theme-ui": "^0.3.7",
     "deepmerge": "^4.2.2",
     "styled-system": "^5.1.5",
     "theme-ui": "^0.3.5"
   },
-  "yalcSig": "f7d3fe6f443a6e1b79a8986713c32a5b"
+  "peerDependencies": {
+    "react": ">=16"
+  },
+  "yalcSig": "6cdc77e1eb46b9961e93aed8fc17af7a"
 }

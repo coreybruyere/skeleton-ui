@@ -1,3 +1,4 @@
+/** @jsxRuntime classic */
 /** @jsx jsx */
 import { jsx } from 'theme-ui';
 import React, { forwardRef } from 'react';
@@ -12,7 +13,7 @@ import { ConditionalWrap } from '../ConditionalWrap';
 
 export type StyledRadioProps = React.ComponentPropsWithoutRef<'input'> &
   BoxProps & {
-    label: string;
+    label?: string;
     disabled?: boolean;
     error?: boolean;
   };
@@ -128,8 +129,8 @@ export const Radio = forwardRef<HTMLInputElement, RadioProps>(
           height={1}
           overflow="hidden"
         />
-        <Box
-          as={RadioIcon}
+        <RadioIcon
+          as={Box}
           aria-hidden="true"
           disabled={disabled}
           error={error}

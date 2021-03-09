@@ -1,3 +1,4 @@
+/** @jsxRuntime classic */
 /** @jsx jsx */
 import { jsx } from 'theme-ui';
 import React, { forwardRef } from 'react';
@@ -12,7 +13,7 @@ import { ConditionalWrap } from '../ConditionalWrap';
 
 export type StyledCheckboxProps = React.ComponentPropsWithoutRef<'input'> &
   BoxProps & {
-    label: string;
+    label?: string;
     disabled?: boolean;
     error?: boolean;
   };
@@ -129,8 +130,8 @@ export const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(
           height={1}
           overflow="hidden"
         />
-        <Box
-          as={CheckboxIcon}
+        <CheckboxIcon
+          as={Box}
           aria-hidden="true"
           disabled={disabled}
           error={error}

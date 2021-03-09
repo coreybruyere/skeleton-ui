@@ -5,7 +5,7 @@ import { space, color, layout, flexbox, position, border, typography, compose, v
 import styled from '@emotion/styled';
 import React, { forwardRef } from 'react';
 import { css } from '@emotion/css';
-import { Global as Global$1 } from '@emotion/core';
+import { Global as Global$1 } from '@emotion/react';
 
 var shouldForwardProp = /*#__PURE__*/createShouldForwardProp( /*#__PURE__*/[].concat(space.propNames, color.propNames, layout.propNames, flexbox.propNames, position.propNames));
 var baseStyleProps = [layout, flexbox, border, position];
@@ -162,48 +162,10 @@ var ConditionalWrap = function ConditionalWrap(_ref) {
   return condition ? wrapper(children) : children;
 };
 
-function _templateObject4() {
-  var data = _taggedTemplateLiteralLoose([""]);
-
-  _templateObject4 = function _templateObject4() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject3() {
-  var data = _taggedTemplateLiteralLoose(["\n  display: block;\n\n  input:checked ~ & {\n    display: none;\n  }\n\n  ", "\n"]);
-
-  _templateObject3 = function _templateObject3() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject2() {
-  var data = _taggedTemplateLiteralLoose(["\n  display: none;\n\n  input:checked ~ & {\n    display: block;\n  }\n\n  ", "\n"]);
-
-  _templateObject2 = function _templateObject2() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject() {
-  var data = _taggedTemplateLiteralLoose(["\n  cursor: pointer;\n\n  &:hover {\n    color: ", ";\n  }\n\n  input:focus ~ & {\n    color: ", ";\n  }\n\n  input:checked:disabled ~ &,\n  input:disabled ~ & {\n    color: ", ";\n  }\n\n  input:checked ~ & {\n    color: ", ";\n  }\n"]);
-
-  _templateObject = function _templateObject() {
-    return data;
-  };
-
-  return data;
-}
+var _templateObject, _templateObject2, _templateObject3, _templateObject4;
 
 var checkboxIconStyles = function checkboxIconStyles(props) {
-  return css(_templateObject(), props.error ? props.theme.colors.error : props.theme.colors.primary, props.error ? props.theme.colors.error : props.theme.colors.primary, props.theme.colors.muted, props.error ? props.theme.colors.error : props.theme.colors.primary);
+  return css(_templateObject || (_templateObject = _taggedTemplateLiteralLoose(["\n  cursor: pointer;\n\n  &:hover {\n    color: ", ";\n  }\n\n  input:focus ~ & {\n    color: ", ";\n  }\n\n  input:checked:disabled ~ &,\n  input:disabled ~ & {\n    color: ", ";\n  }\n\n  input:checked ~ & {\n    color: ", ";\n  }\n"])), props.error ? props.theme.colors.error : props.theme.colors.primary, props.error ? props.theme.colors.error : props.theme.colors.primary, props.theme.colors.muted, props.error ? props.theme.colors.error : props.theme.colors.primary);
 };
 
 var CheckedIcon = function CheckedIcon(props) {
@@ -230,8 +192,8 @@ var UncheckedIcon = function UncheckedIcon(props) {
   }));
 };
 
-var Checked = /*#__PURE__*/styled(CheckedIcon)( /*#__PURE__*/_templateObject2(), checkboxIconStyles);
-var Unchecked = /*#__PURE__*/styled(UncheckedIcon)( /*#__PURE__*/_templateObject3(), checkboxIconStyles);
+var Checked = /*#__PURE__*/styled(CheckedIcon)(_templateObject2 || (_templateObject2 = /*#__PURE__*/_taggedTemplateLiteralLoose(["\n  display: none;\n\n  input:checked ~ & {\n    display: block;\n  }\n\n  ", "\n"])), checkboxIconStyles);
+var Unchecked = /*#__PURE__*/styled(UncheckedIcon)(_templateObject3 || (_templateObject3 = /*#__PURE__*/_taggedTemplateLiteralLoose(["\n  display: block;\n\n  input:checked ~ & {\n    display: none;\n  }\n\n  ", "\n"])), checkboxIconStyles);
 
 var CheckboxIcon = function CheckboxIcon(props) {
   return jsx(React.Fragment, null, jsx(Checked, Object.assign({}, props)), jsx(Unchecked, Object.assign({}, props)));
@@ -239,7 +201,7 @@ var CheckboxIcon = function CheckboxIcon(props) {
 
 var StyledCheckbox = /*#__PURE__*/styled(Box, {
   shouldForwardProp: shouldForwardProp
-})( /*#__PURE__*/_templateObject4());
+})(_templateObject4 || (_templateObject4 = /*#__PURE__*/_taggedTemplateLiteralLoose([""])));
 /* Add console warning if label isn't passed. It IS optional but should only be omitted if consumer understands how to use */
 
 var Checkbox = /*#__PURE__*/forwardRef(function (_ref, ref) {
@@ -281,8 +243,8 @@ var Checkbox = /*#__PURE__*/forwardRef(function (_ref, ref) {
     width: 1,
     height: 1,
     overflow: "hidden"
-  })), jsx(Box, {
-    as: CheckboxIcon,
+  })), jsx(CheckboxIcon, {
+    as: Box,
     "aria-hidden": "true",
     disabled: disabled,
     error: error,
@@ -301,26 +263,15 @@ var Checkbox = /*#__PURE__*/forwardRef(function (_ref, ref) {
   }, label)));
 });
 
-function _templateObject$1() {
-  var data = _taggedTemplateLiteralLoose(["\n  overflow: visible;\n  border: none;\n  background-color: ", ";\n  ", ";\n"]);
-
-  _templateObject$1 = function _templateObject() {
-    return data;
-  };
-
-  return data;
-}
-var StyledDivider = /*#__PURE__*/styled(Box)( /*#__PURE__*/_templateObject$1(), function (_ref) {
-  var theme = _ref.theme;
-  return theme.colors.border;
-}, function (_ref2) {
-  var direction = _ref2.direction;
+var _templateObject$1;
+var StyledDivider = /*#__PURE__*/styled(Box)(_templateObject$1 || (_templateObject$1 = /*#__PURE__*/_taggedTemplateLiteralLoose(["\n  overflow: visible;\n  border: none;\n  ", ";\n"])), function (_ref) {
+  var direction = _ref.direction;
   return direction === 'vertical' && "\n      display: inline-block;\n      vertical-align: middle;\n    ";
 });
-var Divider = /*#__PURE__*/forwardRef(function (_ref3, ref) {
-  var _ref3$direction = _ref3.direction,
-      direction = _ref3$direction === void 0 ? 'horizontal' : _ref3$direction,
-      rest = _objectWithoutPropertiesLoose(_ref3, ["direction", "height"]);
+var Divider = /*#__PURE__*/forwardRef(function (_ref2, ref) {
+  var _ref2$direction = _ref2.direction,
+      direction = _ref2$direction === void 0 ? 'horizontal' : _ref2$direction,
+      rest = _objectWithoutPropertiesLoose(_ref2, ["direction", "height"]);
 
   return React.createElement(StyledDivider, Object.assign({
     as: 'hr',
@@ -375,16 +326,8 @@ Heading.defaultProps = {
   as: 'h1'
 };
 
-function _templateObject$2() {
-  var data = _taggedTemplateLiteralLoose(["\n  color: red;\n"]);
-
-  _templateObject$2 = function _templateObject() {
-    return data;
-  };
-
-  return data;
-}
-var StyledInput = /*#__PURE__*/styled(Box)( /*#__PURE__*/_templateObject$2());
+var _templateObject$2;
+var StyledInput = /*#__PURE__*/styled(Box)(_templateObject$2 || (_templateObject$2 = /*#__PURE__*/_taggedTemplateLiteralLoose(["\n  color: red;\n"])));
 var Input = /*#__PURE__*/forwardRef(function (_ref, ref) {
   var children = _ref.children,
       rest = _objectWithoutPropertiesLoose(_ref, ["children"]);
@@ -418,16 +361,8 @@ Link.defaultProps = {
   as: 'a'
 };
 
-function _templateObject$3() {
-  var data = _taggedTemplateLiteralLoose(["\n  /* arrow styles */\n  background: transparent;\n  background-image: url(data:image/svg+xml,%0A%3Csvg%20width%3D%2215px%22%20height%3D%229px%22%20viewBox%3D%22301%2017%2015%209%22%20version%3D%221.1%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20xmlns%3Axlink%3D%22http%3A//www.w3.org/1999/xlink%22%3E%0A%20%20%20%20%3C%21--%20Generator%3A%20Sketch%2042%20%2836781%29%20-%20http%3A//www.bohemiancoding.com/sketch%20--%3E%0A%20%20%20%20%3Cdesc%3ECreated%20with%20Sketch.%3C/desc%3E%0A%20%20%20%20%3Cdefs%3E%3C/defs%3E%0A%20%20%20%20%3Cpolygon%20id%3D%22Combined-Shape%22%20stroke%3D%22none%22%20fill%3D%22%2398A8B3%22%20fill-rule%3D%22evenodd%22%20points%3D%22314.6%2018%20316%2019.3333333%20309%2026%20302%2019.3333333%20303.4%2018%20309%2023.3333333%22%3E%3C/polygon%3E%0A%3C/svg%3E);\n  background-repeat: no-repeat;\n  background-position: calc(100% - 2px) 50%;\n  overflow: hidden;\n  white-space: nowrap;\n  text-overflow: ellipsis;\n  -webkit-appearance: none;\n  -moz-appearance: none;\n"]);
-
-  _templateObject$3 = function _templateObject() {
-    return data;
-  };
-
-  return data;
-}
-var StyledSelect = /*#__PURE__*/styled(Box)( /*#__PURE__*/_templateObject$3());
+var _templateObject$3;
+var StyledSelect = /*#__PURE__*/styled(Box)(_templateObject$3 || (_templateObject$3 = /*#__PURE__*/_taggedTemplateLiteralLoose(["\n  /* arrow styles */\n  background: transparent;\n  background-image: url(data:image/svg+xml,%0A%3Csvg%20width%3D%2215px%22%20height%3D%229px%22%20viewBox%3D%22301%2017%2015%209%22%20version%3D%221.1%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20xmlns%3Axlink%3D%22http%3A//www.w3.org/1999/xlink%22%3E%0A%20%20%20%20%3C%21--%20Generator%3A%20Sketch%2042%20%2836781%29%20-%20http%3A//www.bohemiancoding.com/sketch%20--%3E%0A%20%20%20%20%3Cdesc%3ECreated%20with%20Sketch.%3C/desc%3E%0A%20%20%20%20%3Cdefs%3E%3C/defs%3E%0A%20%20%20%20%3Cpolygon%20id%3D%22Combined-Shape%22%20stroke%3D%22none%22%20fill%3D%22%2398A8B3%22%20fill-rule%3D%22evenodd%22%20points%3D%22314.6%2018%20316%2019.3333333%20309%2026%20302%2019.3333333%20303.4%2018%20309%2023.3333333%22%3E%3C/polygon%3E%0A%3C/svg%3E);\n  background-repeat: no-repeat;\n  background-position: calc(100% - 2px) 50%;\n  overflow: hidden;\n  white-space: nowrap;\n  text-overflow: ellipsis;\n  -webkit-appearance: none;\n  -moz-appearance: none;\n"])));
 var Select = /*#__PURE__*/forwardRef(function (_ref, ref) {
   var children = _ref.children,
       rest = _objectWithoutPropertiesLoose(_ref, ["children"]);
@@ -442,16 +377,8 @@ var Select = /*#__PURE__*/forwardRef(function (_ref, ref) {
   }, rest), children);
 });
 
-function _templateObject$4() {
-  var data = _taggedTemplateLiteralLoose(["\n  display: inline-block;\n  overflow: visible;\n  border-width: 1px;\n  border-style: solid;\n  border-color: #a7b3be;\n"]);
-
-  _templateObject$4 = function _templateObject() {
-    return data;
-  };
-
-  return data;
-}
-var StyledTag = /*#__PURE__*/styled(Box)( /*#__PURE__*/_templateObject$4());
+var _templateObject$4;
+var StyledTag = /*#__PURE__*/styled(Box)(_templateObject$4 || (_templateObject$4 = /*#__PURE__*/_taggedTemplateLiteralLoose(["\n  display: inline-block;\n  overflow: visible;\n  border-width: 1px;\n  border-style: solid;\n  border-color: #a7b3be;\n"])));
 var Tag = function Tag(_ref) {
   var children = _ref.children,
       rest = _objectWithoutPropertiesLoose(_ref, ["children"]);
