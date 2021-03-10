@@ -2,7 +2,7 @@
 
 A starter _skeleton_ that gives **you** the _bare bones_ needed to get up and running with your design system.
 
-# Typescript reproduction issue
+<!-- # Typescript reproduction issue
 
 1. Clone project
 2. `npm i` in root (or lerna bootstrap)
@@ -13,7 +13,7 @@ A starter _skeleton_ that gives **you** the _bare bones_ needed to get up and ru
 7. `yalc add @skeleton-ui/core` and `npm i`
 8. Open `prepublish-test/src/App.tsx`
 9. View error when hovering over `Button` component on line 11.
-10. In `prepublish-test/node_modules/@skeleton-ui/dist/components/Button/Button.d.ts` you'll see the compiled defintion. In `prepublish-test/node_modules/@skeleton-ui/src/components/Button` you'll see the Button component. Its there I've been making changes and manually checking TS errors inside of App.tsx
+10. In `prepublish-test/node_modules/@skeleton-ui/dist/components/Button/Button.d.ts` you'll see the compiled defintion. In `prepublish-test/node_modules/@skeleton-ui/src/components/Button` you'll see the Button component. Its there I've been making changes and manually checking TS errors inside of App.tsx -->
 
 ## Contributing
 

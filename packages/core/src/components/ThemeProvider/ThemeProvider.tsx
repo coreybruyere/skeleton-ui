@@ -4,7 +4,7 @@ import { theme as defaultTheme } from '../../theme';
 
 const merge = require('deepmerge');
 
-type Theme = typeof defaultTheme;
+export type Theme = typeof defaultTheme;
 
 export interface ThemeProviderProps {
   theme: Theme | ((outerTheme: Theme) => Theme);

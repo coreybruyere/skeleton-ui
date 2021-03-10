@@ -1,7 +1,9 @@
 import React from 'react';
 import { Global as BaseGlobal } from '@emotion/core';
 
-export const Global = () => {
+import { Theme } from '../ThemeProvider';
+
+export const Global: React.FC<Theme> = () => {
   return (
     <BaseGlobal
       styles={(theme: any) => ({
