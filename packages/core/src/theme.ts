@@ -133,6 +133,22 @@
 //   },
 // };
 
+/*
+Red      #FF0000  rgb(255, 0, 0)   danger  (alert, button)
+Maroon   #800000  rgb(128, 0, 0)   danger hover (button)
+Yellow   #FFFF00  rgb(255, 255, 0) warning (alert)
+Olive    #808000  rgb(128, 128, 0) 
+Green    #008000  rgb(0, 128, 0)   success (alert)
+Blue     #0000FF  rgb(0, 0, 255)   primary
+Teal     #008080  rgb(0, 128, 128) secondary
+Navy     #000080  rgb(0, 0, 128)   primary hover (link, button)
+Fuchsia  #FF00FF  rgb(255, 0, 255) 
+Purple   #800080  rgb(128, 0, 128) visited
+
+Black (light black)
+Grays 3 colors (default button, bg, )
+*/
+
 export const theme = {
   breakpoints: ['40em', '52em', '64em'],
   space: [
