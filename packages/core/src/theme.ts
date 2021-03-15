@@ -188,14 +188,15 @@ export const theme = {
     heading: 1.125,
   },
   colors: {
-    text: '#000',
-    background: '#fff',
-    primary: '#07c',
-    secondary: '#30c',
-    muted: '#f6f6f6',
-    border: '#a0a0a0',
-    warning: 'yellow',
-    error: 'red',
+    text: '#141414', // Light Black
+    background: '#FFFFFF', // White
+    primary: '#0000FF', // Blue
+    secondary: '#008080', // Teal
+    muted: '#F6F6F6', // Light Gray
+    border: '#A0A0A0', // Mid Gray
+    warning: '#FFFF00', // Yellow
+    error: '#FF0000', // Red
+    visited: '#800080', // Purple
   },
   text: {
     heading: {
