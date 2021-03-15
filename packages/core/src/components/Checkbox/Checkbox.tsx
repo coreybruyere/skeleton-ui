@@ -131,7 +131,6 @@ export const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(
           overflow="hidden"
         />
         <CheckboxIcon
-          as={Box}
           aria-hidden="true"
           disabled={disabled}
           error={error}

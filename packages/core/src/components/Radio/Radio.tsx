@@ -130,9 +130,8 @@ export const Radio = forwardRef<HTMLInputElement, RadioProps>(
           overflow="hidden"
         />
         <RadioIcon
-          as={Box}
           aria-hidden="true"
-          disabled={disabled}
+          disabled={disabled as any}
           error={error}
           m={m}
           mt={mt}
