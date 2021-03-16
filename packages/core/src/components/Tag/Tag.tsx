@@ -1,22 +1,26 @@
 import React from 'react';
-import styled from '@emotion/styled';
 
-import { Box, BoxProps } from '../Box';
+import { Text, TextProps } from '../Text';
 
-export type StyledTagProps = BoxProps;
-
-export const StyledTag = styled(Box)<StyledTagProps>`
-  display: inline-block;
-  overflow: visible;
-  border-width: 1px;
-  border-style: solid;
-  border-color: #a7b3be;
-`;
+export type StyledTagProps = TextProps;
 
 export type TagProps = StyledTagProps & {
   children: React.ReactNode;
 };
 
 export const Tag: React.FC<TagProps> = ({ children, ...rest }) => (
-  <StyledTag {...rest}>{children}</StyledTag>
+  <Text
+    display={'inline-block'}
+    py={1}
+    px={2}
+    overflow={'visible'}
+    fontSize={2}
+    borderColor={'border'}
+    borderWidth={1}
+    borderStyle={'solid'}
+    borderRadius={2}
+    {...rest}
+  >
+    {children}
+  </Text>
 );

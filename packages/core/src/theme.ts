@@ -149,8 +149,12 @@ Black (light black)
 Grays 3 colors (default button, bg, )
 */
 
-export const theme = {
-  breakpoints: ['40em', '52em', '64em'],
+import { Theme } from 'theme-ui';
+
+const makeTheme = <T extends Theme>(t: T): T => t;
+
+export const theme = makeTheme({
+  breakpoints: [0, '40em', '52em', '64em'],
   space: [
     0,
     '.25rem',
@@ -169,7 +173,9 @@ export const theme = {
     monospace: 'Menlo, monospace',
   },
   fontSizes: [
+    0,
     '0.75rem', // 12px
+    '0.875rem', // 14px
     '1rem', // 16px
     '1.25rem', // 20px
     '1.5rem', // 24px
@@ -198,6 +204,18 @@ export const theme = {
     error: '#FF0000', // Red
     visited: '#800080', // Purple
   },
+  radii: [
+    0,
+    '0.0625rem', // 1px
+    '0.125rem', // 2px
+    '0.1875rem', // 3px
+  ],
+  borderWidths: [
+    0,
+    '0.0625rem', // 1px
+    '0.125rem', // 2px
+    '0.1875rem', // 3px
+  ],
   text: {
     heading: {
       fontFamily: 'heading',
@@ -205,6 +223,7 @@ export const theme = {
       fontWeight: 'heading',
     },
   },
+
   styles: {
     root: {
       fontFamily: 'body',
@@ -260,4 +279,4 @@ export const theme = {
       borderBottomStyle: 'solid',
     },
   },
-};
+});

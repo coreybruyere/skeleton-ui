@@ -6,6 +6,10 @@ const merge = require('deepmerge');
 
 export type Theme = typeof defaultTheme;
 
+// Inform Emotion about SkeletonUITheme theme.
+declare module '@emotion/react' {
+  export interface SkeletonUITheme extends Theme {}
+}
 export interface ThemeProviderProps {
   theme: Theme | ((outerTheme: Theme) => Theme);
   children?: React.ReactNode;
