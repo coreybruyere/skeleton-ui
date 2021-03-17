@@ -19,12 +19,7 @@ export type StyledDividerProps = React.ComponentPropsWithoutRef<'hr'> &
 export const StyledDivider = styled(Box)<StyledDividerProps>`
   overflow: visible;
   border: none;
-
-  ${({ theme }) => {
-    return {
-      borderBottom: `1px solid ${theme.colors.text}`,
-    };
-  }}
+  color: ${({ theme }) => theme.colors.text};
 
   ${({ direction }) =>
     direction === 'vertical' &&
