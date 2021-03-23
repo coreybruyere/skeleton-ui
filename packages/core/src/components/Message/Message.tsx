@@ -16,7 +16,7 @@ const defaultextStyles = {
   border: 0,
 };
 
-const alertVariants = variant({
+const messageVariants = variant({
   variants: {
     primary: {
       ...defaultextStyles,
@@ -37,25 +37,25 @@ const alertVariants = variant({
   },
 });
 
-export type StyledAlertProps = React.ComponentPropsWithoutRef<'div'> &
+export type StyledMessageProps = React.ComponentPropsWithoutRef<'div'> &
   TypographyProps &
   FlexProps;
 
-const StyledAlert = styled(Flex)<AlertProps>(
-  compose(...typographyStyleProps, alertVariants)
+const StyledMessage = styled(Flex)<MessageProps>(
+  compose(...typographyStyleProps, messageVariants)
 );
 
-export type AlertProps = StyledAlertProps & {
+export type MessageProps = StyledMessageProps & {
   children: React.ReactNode;
   isDismissable?: boolean;
   variant?: 'primary' | 'secondary' | 'bare';
 };
 
-export const Alert = forwardRef<HTMLDivElement, AlertProps>(
+export const Message = forwardRef<HTMLDivElement, MessageProps>(
   ({ children, variant = 'primary', isDismissable = true, ...rest }, ref) => (
-    <StyledAlert variant={variant} ref={ref as any} {...rest}>
+    <StyledMessage variant={variant} ref={ref as any} {...rest}>
       {children}
       {isDismissable && <Button variant="bare">x</Button>}
-    </StyledAlert>
+    </StyledMessage>
   )
 );
