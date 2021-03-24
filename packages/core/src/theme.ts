@@ -152,6 +152,8 @@ Grays 3 colors (default button, bg, )
 import { Theme } from 'theme-ui';
 
 const makeTheme = <T extends Theme>(t: T): T => t;
+// If full control of theme colors is needed, use this instead:
+// const makeTheme = <T extends Omit<Theme, 'colors'>>(t: T): T => t;
 
 export const theme = makeTheme({
   breakpoints: [0, '40em', '52em', '64em'],
