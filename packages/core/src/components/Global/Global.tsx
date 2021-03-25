@@ -9,7 +9,6 @@ export const Global: React.FC<Theme> = () => {
       styles={(theme: any) => ({
         '*': {
           boxSizing: 'border-box',
-          color: theme.colors.text,
         },
       })}
     />
