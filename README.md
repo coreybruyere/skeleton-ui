@@ -33,11 +33,11 @@ See [Contributing documentation](/CONTRIBUTING.md) for installation and developm
 
 
 
-## To-do:
+// ## To-do:
 
-- Document yalc process in CONTRIBUTING
-- Figure out Props of issue in MDX files
-- Update README in individual packages
-- Document usage (Use as template)
-- Add simple icon component
-- Document when to use styled prop functions
+// - Document yalc process in CONTRIBUTING
+// - Figure out Props of issue in MDX files
+// - Update README in individual packages
+// - Document usage (Use as template)
+// - Add simple icon component
+// - Document when to use styled prop functions
