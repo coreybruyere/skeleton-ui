@@ -4,9 +4,7 @@ A starter _skeleton_ that gives **you** the _bare bones_ needed to get up and ru
 
 Skeleton UI is built with React, Typescript, [Theme UI](https://github.com/system-ui/theme-ui), [Styled System](https://github.com/styled-system/styled-system), and emotion and structured as a monorepo using Lerna.
 
-This design system kit comes with a minimal, basic theme which you can configure as you please. This gives you the power to use it as a starting point for your next design system. 
-
-Skeleton UI gives you a set of starter components on top of customizable theme-based design scales that help you build UI rooted in constraint-based design principles.
+Skeleton UI gives you a set of starter components on top of customizable theme-based design scales that help you build UI rooted in constraint-based design principles. Customize, configure, and adjust these design scales inside of the theme object to your liking. 
 
 **This kit is meant to be cloned and made into your own, custom design system**. 
 
