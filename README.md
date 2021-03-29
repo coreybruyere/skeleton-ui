@@ -4,7 +4,7 @@ A starter _skeleton_ that gives **you** the _bare bones_ needed to get up and ru
 
 Skeleton UI is built with React, Typescript, Theme UI, styled-system, and emotion and structured as a monorepo using Lerna.
 
-This design system kit comes with a minimal, basic theme which you can configure as you please. This gives you the power to use it as a starting point for your next design system. This kit is meant to be cloned and made into your own, custom design system. 
+This design system kit comes with a minimal, basic theme which you can configure as you please. This gives you the power to use it as a starting point for your next design system. **This kit is meant to be cloned and made into your own, custom design system**. 
 
 ## Usage
 
