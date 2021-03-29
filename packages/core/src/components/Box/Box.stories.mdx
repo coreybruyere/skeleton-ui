@@ -25,10 +25,10 @@ Building block of layouts. Creates a box-model context
     <Box>
       <Box
         sx={{
-          padding: 3,
+          p: 3,
           bg: 'muted',
         }}>
-        This is a Box
+        This is a Box with a <code>p</code> value of <code>3</code> which is mapped to <code>theme.space[3]</code>.
       </Box>
     </Box>
   </Story>
@@ -38,8 +38,13 @@ Building block of layouts. Creates a box-model context
 
 <Preview withToolbar withSource="open">
   <Story name="With sizing">
-    <Box width={5} height={5}>
-      Box with sizing
+    <Box sx={{
+        padding: 3,
+        bg: 'muted',
+        width: '75%',
+        height: 120,
+      }}>
+      Box with <code>75%</code> <code>width</code> and <code>height</code> value of <code>120</code>.
     </Box>
   </Story>
 </Preview>

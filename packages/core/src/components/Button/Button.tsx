@@ -5,7 +5,7 @@ import { compose, variant } from 'styled-system';
 import { TypographyProps, typographyStyleProps } from '../../system';
 import { Box, BoxProps } from '../Box';
 
-const defaultextStyles = {
+const defaultButtonStyles = {
   fontFamily: 'body',
   fontWeight: 'body',
   lineHeight: 'body',
@@ -19,12 +19,12 @@ const defaultextStyles = {
 const buttonVariants = variant({
   variants: {
     primary: {
-      ...defaultextStyles,
+      ...defaultButtonStyles,
       fontSize: 1,
       bg: 'primary',
     },
     secondary: {
-      ...defaultextStyles,
+      ...defaultButtonStyles,
       fontSize: 1,
       bg: 'secondary',
     },
