@@ -17,7 +17,7 @@ git clone https://github.com/coreybruyere/skeleton-ui.git`
 ```
 **or**
 
-Click 'Use Template' button on the top of this page.
+Click 'Use this template' button on the top of this page.
 
 ## Features
 
