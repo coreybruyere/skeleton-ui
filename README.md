@@ -10,7 +10,7 @@ This design system kit comes with a minimal, basic theme which you can configure
 
 ### Clone or Use Template
 
-Skeleton UI is a starter, _bare bones_ template that enables you to build, theme, and design components as you'd like. Use Skeleton UI as a starting point for your next design system!
+Skeleton UI is a starter, _bare bones_ template that enables you to build, theme, and design components as you'd like. 
 
 ```
 git clone https://github.com/coreybruyere/skeleton-ui.git`
