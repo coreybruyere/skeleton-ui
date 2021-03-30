@@ -41,5 +41,6 @@ See [Contributing documentation](/CONTRIBUTING.md) for installation and developm
 <!--- - Figure out Props of issue in MDX files --->
 <!--- - Update README in individual packages --->
 <!--- - Document usage (Use as template) --->
+<!--- - REMOVE all refs to skeleton-ui npm and set up at version 0.1.0 -->
 <!--- - Add simple icon component --->
 <!--- - Document when to use styled prop functions --->
