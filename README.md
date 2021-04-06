@@ -12,14 +12,7 @@ Skeleton UI is a simple and unopinionated starter kit with a small set of compon
 
 ### Clone or Use Template
 
-Skeleton UI is a starter, _bare bones_ template that enables you to build, theme, and design components as you'd like. 
-
-```
-git clone https://github.com/coreybruyere/skeleton-ui.git`
-```
-**or**
-
-Click 'Use this template' button on the top of this page.
+To start building out your own design system run `git clone https://github.com/coreybruyere/skeleton-ui.git` **or** click 'Use this template' button on the top of this page.
 
 ## Features
 
