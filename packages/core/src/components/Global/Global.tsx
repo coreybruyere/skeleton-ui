@@ -6,7 +6,7 @@ import { Theme } from '../ThemeProvider';
 export const Global: React.FC<Theme> = () => {
   return (
     <BaseGlobal
-      styles={(theme: any) => ({
+      styles={() => ({
         '*': {
           boxSizing: 'border-box',
         },
