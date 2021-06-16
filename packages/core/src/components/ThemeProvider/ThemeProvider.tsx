@@ -12,7 +12,7 @@ declare module '@emotion/react' {
   export interface Theme extends SkeletonUITheme {}
 }
 export interface ThemeProviderProps {
-  theme: Theme | ((outerTheme: Theme) => Theme);
+  theme?: Theme | ((outerTheme: Theme) => Theme);
   children?: React.ReactNode;
 }
 
