@@ -156,7 +156,7 @@ const makeTheme = <T extends Theme>(t: T): T => t;
 // const makeTheme = <T extends Omit<Theme, 'colors'>>(t: T): T => t;
 
 export const theme = makeTheme({
-  breakpoints: [0, '40em', '52em', '64em'],
+  breakpoints: ['0', '40em', '52em', '64em'],
   space: [
     0,
     '.25rem',
